@@ -1,5 +1,5 @@
 import java.util.Scanner;
-/**
+/**.
  * Class for solution.
  */
 final class Solution {
@@ -34,7 +34,7 @@ final class Solution {
 			return 1;
 		}
 		else {
-			return base * power(base , exponent-1);
+			return base * power(base , exponent - 1);
 		}
 	}
 }
