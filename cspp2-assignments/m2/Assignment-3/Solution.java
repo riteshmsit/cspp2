@@ -30,9 +30,11 @@ final class Solution {
 	 * @return     { power of the variable }
 	 */
 	public static long power(final int base, final int exponent) {
-		if (exponent == 0) return 1;
+		if (exponent == 0) {
+			return 1;
+		}
 		else {
-			return base * power(base,exponent-1);
+			return base * power(base , exponent-1);
 		}
 	}
 }
