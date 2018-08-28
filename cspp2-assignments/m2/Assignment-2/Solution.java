@@ -2,11 +2,11 @@ import java.util.Scanner;
 /**.
  * { item_description }
  */
-public class Solution {
+final public class Solution {
     /**
      * class of program
      */
-    private Solution(){
+    private Solution() {
         /**.
          * Constructer
          */
@@ -36,4 +36,4 @@ public class Solution {
         double m2 = (-b - Math.sqrt((b * b) - d * a * c)) / (2 * a);
         System.out.println(m1 + " " + m2);
     }
-    }
+}
