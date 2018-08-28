@@ -11,7 +11,7 @@ final class Solution {
 	 *
 	 * @param      args  The arguments
 	 */
-	public static void main(final String[] args) {
+	static void main(final String[] args) {
 		Scanner s = new Scanner(System.in);      
 		int base = s.nextInt();
 		int exponent = s.nextInt();
@@ -34,7 +34,7 @@ final class Solution {
 			return 1;
 		}
 		else {
-			return base * power(base ,exponent - 1);
+			return base * power(base , exponent - 1);
 		}
 	}
 }
