@@ -37,3 +37,4 @@ final class Solution {
         System.out.println(m1 + " " + m2);
     }
 }
+
