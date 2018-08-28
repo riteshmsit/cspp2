@@ -2,8 +2,8 @@ import java.util.Scanner;
 /**.
  * { item_description }
  */
-final public class Solution {
-    /**
+final class Solution {
+    /**.
      * class of program
      */
     private Solution() {
