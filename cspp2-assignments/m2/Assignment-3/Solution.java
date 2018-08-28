@@ -34,7 +34,7 @@ final class Solution {
 			return 1;
 		}
 		else {
-			return base * power(base , exponent - 1);
+			return base * power(base ,exponent - 1);
 		}
 	}
 }
