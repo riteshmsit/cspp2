@@ -3,6 +3,14 @@ import java.util.Scanner;
  * { item_description }
  */
 public class Solution {
+    /**
+     * class of program
+     */
+    private Solution(){
+        /**.
+         * Constructer
+         */
+    }
     /**.
      * { function_description }
      *
@@ -23,9 +31,9 @@ public class Solution {
      * @param      c     { third variable }
      */
     public static void equation(final int a, final int b, final int c) {
-        double m1 = (-b + Math.sqrt((b * b) - 4 * a * c)) / (2 * a);
-        double m2 = (-b - Math.sqrt((b * b) - 4 * a * c)) / (2 * a);
+        final int d = 4;
+        double m1 = (-b + Math.sqrt((b * b) - d * a * c)) / (2 * a);
+        double m2 = (-b - Math.sqrt((b * b) - d * a * c)) / (2 * a);
         System.out.println(m1 + " " + m2);
-    }       
     }
-
+    }
