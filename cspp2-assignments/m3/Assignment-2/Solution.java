@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**.
  * { Class of the program }
  */
-final public class Solution {
+final class Solution {
     /**.
      * { To divide by 10 to get digits }
      */
@@ -39,3 +39,6 @@ final public class Solution {
         System.out.println(count);
     }
 }
+
+
+
