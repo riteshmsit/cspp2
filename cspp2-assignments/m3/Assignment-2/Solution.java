@@ -18,6 +18,6 @@ public class Solution {
         	    b = b/10;
             }
         }
-        System.out.println(count); 	
+        System.out.println(count+1); 	
     }
 }
