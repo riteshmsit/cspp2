@@ -12,12 +12,12 @@ public class Solution {
         int count = 0;
         for(int i=1;i<=n;i++) {
         	int a = i, b=a;
-        	while (a != 0) {
+        	while (b != 0) {
         		a = b%10;
         		if (a == 7) count += 1;     		
         	    b = b/10;
             }
         }
-        System.out.println(count+1); 	
+        System.out.println(count); 	
     }
 }
