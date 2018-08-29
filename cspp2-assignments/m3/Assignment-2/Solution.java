@@ -7,6 +7,15 @@ import java.util.Scanner;
  * { Class of the program }
  */
 final public class Solution {
+    /**.
+     * { To divide by 10 to get digits }
+     */
+    public static final int I = 10;
+    /**.
+     * { To count number of 7's }
+     */
+    public static final int D = 7;
+
 /* Fill the main function to print the number of 7's between 1 to n*/
 /**.
  * { main method or function }
@@ -19,13 +28,12 @@ final public class Solution {
         int count = 0;
         for (int i = 1; i <= n; i++) {
             int a = i, b = a;
-            int d = 10, e = 7;
             while (b != 0) {
-                a = b % d;
-                if (a == e) {
+                a = b % I;
+                if (a == D) {
                     count += 1;
                 }
-                b = b / d;
+                b = b / I;
             }
         }
         System.out.println(count);
