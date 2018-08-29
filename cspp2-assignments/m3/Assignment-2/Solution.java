@@ -3,8 +3,16 @@ import java.util.Scanner;
 /*
     Do not modify this main function.
     */
+/**
+ * { Class of the program }
+ */
 final public class Solution {
 /* Fill the main function to print the number of 7's between 1 to n*/
+/**
+ * { main method or function }
+ *
+ * @param      args  The arguments
+ */
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
@@ -15,7 +23,7 @@ final public class Solution {
             while (b != 0) {
                 a = b % d;
                 if (a == e) {
-                    count += 1;  
+                    count += 1;
                 }
                 b = b / d;
             }
