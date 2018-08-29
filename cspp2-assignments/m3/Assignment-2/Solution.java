@@ -15,6 +15,12 @@ final class Solution {
      * { To count number of 7's }
      */
     public static final int D = 7;
+    /**.
+     * Constructs the object.
+     */
+    private Solution() {
+
+    }
 
 /* Fill the main function to print the number of 7's between 1 to n*/
 /**.
