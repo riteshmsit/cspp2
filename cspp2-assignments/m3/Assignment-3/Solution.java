@@ -6,13 +6,13 @@ import java.util.Scanner;
     /**.
      * Class for solution.
      */
-final class Solution {
+class Solution {
     /**.
      * { function_description }
      *
      * @param      args  Main method or function
      */
-    public static void main(final String[] args) {
+    static void main(final String[] args) {
 
         Scanner s = new Scanner(System.in);
         int n1 = s.nextInt();
@@ -48,5 +48,6 @@ final class Solution {
     return 1;
     }
 }
+
 
 
