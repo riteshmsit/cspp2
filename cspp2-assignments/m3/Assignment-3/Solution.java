@@ -1,24 +1,27 @@
 
 import java.util.Scanner;
 /*
-	Do not modify this main function.
-	*/
-public class Solution {
+    Do not modify this main function.
+    */
+    /**.
+     * Class for solution.
+     */
+class Solution {
     /**.
      * { function_description }
      *
-     * @param      args  The class of program
+     * @param      args  Main method or function
      */
     public static void main(final String[] args) {
 
         Scanner s = new Scanner(System.in);
         int n1 = s.nextInt();
         int n2 = s.nextInt();
-        System.out.println(gcd(n1,n2));
+        System.out.println(gcd(n1, n2));
     }
     /*
-	Need to write the gcd function and print the output.
-	*/
+    Need to write the gcd function and print the output.
+    */
     /**.
      * { function_description }
      *
