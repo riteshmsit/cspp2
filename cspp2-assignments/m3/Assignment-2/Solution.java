@@ -9,8 +9,8 @@ public class Solution {
         Scanner s = new Scanner(System.in);    
         int n = s.nextInt();
         int count = 0;
-        for(int i = 1;i <= n;i++) {
-            int a = i, b=a, d=10,e=7;
+        for (int i = 1; i <= n; i++) {
+            int a = i, b = a, d = 10, e =7;
             while (b != 0) {
                 a = b % d;
                 if (a == e) {
