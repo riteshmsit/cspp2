@@ -6,7 +6,7 @@ import java.util.Scanner;
     /**.
      * Class for solution.
      */
-class Solution {
+final class Solution {
     /**.
      * Constructor
      */
@@ -16,7 +16,7 @@ class Solution {
     /**.
      * { function_description }
      *
-     * @param  c    args  Main method or function
+     * @param      args  The arguments
      */
     public static void main(final String[] args) {
 
@@ -54,6 +54,7 @@ class Solution {
     return 1;
     }
 }
+
 
 
 
