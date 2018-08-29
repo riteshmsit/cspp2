@@ -10,11 +10,12 @@ final public class Solution {
         int n = s.nextInt();
         int count = 0;
         for (int i = 1; i <= n; i++) {
-            int a = i, b = a, d = 10, e = 7;
+            int a = i, b = a;
+            int d = 10, e = 7;
             while (b != 0) {
                 a = b % d;
                 if (a == e) {
-                    count += 1;       
+                    count += 1;   
                 }
                 b = b / d;
             }
