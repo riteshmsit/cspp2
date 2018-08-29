@@ -8,11 +8,17 @@ import java.util.Scanner;
      */
 class Solution {
     /**.
+     * Constructor
+     */
+    private Solution() {
+
+    }
+    /**.
      * { function_description }
      *
-     * @param      args  Main method or function
+     * @param  c    args  Main method or function
      */
-    static void main(final String[] args) {
+    public static void main(final String[] args) {
 
         Scanner s = new Scanner(System.in);
         int n1 = s.nextInt();
@@ -48,6 +54,7 @@ class Solution {
     return 1;
     }
 }
+
 
 
 
