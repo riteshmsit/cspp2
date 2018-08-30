@@ -35,11 +35,6 @@ final class Solution {
             }
         }
         int[][]c = new int[r2][c2];
-        for (int i = 0; i < r2; i++) {
-            for (int j = 0; j < c2; j++) {
-                c[i][j] = a[i][j] + b[i][j];
-            }
-        }
         if (r1 != r2 || c1 != c2) {
             System.out.println("not possible");
         }   else {
@@ -54,4 +49,5 @@ final class Solution {
         }
     }
 }
+
 
