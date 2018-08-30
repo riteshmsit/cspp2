@@ -34,7 +34,8 @@ public class Solution {
 					c[i][j] = a[i][j] + b[i][j];
 					st = st + " ";					
 			}
-				System.out.println(st);
+				System.out.print(st);
+				System.out.println();
 		}
 		}	
 	}
