@@ -29,11 +29,12 @@ public class Solution {
 			System.out.println("not possible");
 		}	else {
 			for (int i =0; i<r2; i++) {
+				String st = "";
 				for(int j =0;j<c2;j++) {
 					c[i][j] = a[i][j] + b[i][j];
-					System.out.print(c[i][j] + " ");					
+					st = st + " ";					
 			}
-				System.out.println();
+				System.out.println(st);
 		}
 		}	
 	}
