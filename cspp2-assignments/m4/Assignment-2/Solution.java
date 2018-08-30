@@ -32,10 +32,9 @@ public class Solution {
 				String st = "";
 				for(int j =0;j<c2;j++) {
 					c[i][j] = a[i][j] + b[i][j];
-					st = st + " ";					
+					st += c[i][j] + " ";					
 			}
-				System.out.print(st);
-				System.out.println();
+				System.out.println(st);
 		}
 		}	
 	}
