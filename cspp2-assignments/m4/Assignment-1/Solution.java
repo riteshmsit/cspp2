@@ -14,9 +14,7 @@ public class Solution
 			if (arr[i] > maximum) {
 				maximum = arr[i];
 			}
-		System.out.println(maximum);
 		}
-		
-
+		System.out.println(maximum);
 	}
 }
