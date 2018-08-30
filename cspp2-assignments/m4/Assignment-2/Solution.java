@@ -28,7 +28,7 @@ final class Solution {
         }
         int r2 = s.nextInt();
         int c2 = s.nextInt();
-        int[][]b = new int [r2][c2];
+        int[][]b = new int[r2][c2];
         for (int i = 0; i < r2; i++) {
             for (int j = 0; j < c2; j++) {
                 b[i][j] = s.nextInt();
@@ -47,9 +47,9 @@ final class Solution {
                 String st = "";
                 for (int j = 0; j < c2; j++) {
                     c[i][j] = a[i][j] + b[i][j];
-                    st += c[i][j] + " ";         
+                    st += c[i][j] + " ";     
             }
-                System.out.println(st.substring(0,st.length()-1));
+                System.out.println(st.substring(0, st.length() - 1));
         }
         }
     }
