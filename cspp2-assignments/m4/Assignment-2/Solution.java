@@ -32,7 +32,7 @@ public class Solution {
 				String st = "";
 				for(int j =0;j<c2;j++) {
 					c[i][j] = a[i][j] + b[i][j];
-					st += c[i][j] + " ";					
+					st += c[i][j] + " ";				
 			}
 				System.out.println(st.substring(0,st.length()-1));
 		}
