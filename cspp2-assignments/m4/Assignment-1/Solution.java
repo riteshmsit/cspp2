@@ -17,11 +17,10 @@ final class Solution {
      *
      * @param      args  Argument array or command prompt arguments
      */
-    public static void main(final String[] args)
-    {
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int []arr = new int[n];
+        int[]arr = new int[n];
         int maximum = 0;
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
