@@ -34,8 +34,8 @@ final class Solution
 		//}
 		//String res = Integer.toString(decimal);
 		//return res;
-	    long binary_value = Integer.parseInt(s);
-		long last_digit, i = 0;
+	    long binary_value = Long.parseLong(s);
+	    long last_digit, i = 0;
 		long decimal_value = 0;
 		while (binary_value != 0) {
 			last_digit = binary_value % 10;
