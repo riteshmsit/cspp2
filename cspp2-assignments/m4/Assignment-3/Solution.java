@@ -1,10 +1,9 @@
 //Java program to convert binary to decimal
-import java.util.*;
+import java.util.Scanner;
 /**.
  * { class of the program }
  */
-final class Solution
-{
+final class Solution {
 /*
     Do not modify this main function.
     */
@@ -18,8 +17,8 @@ final class Solution
     private Solution() {
 
     }
-    public static void main(final String[] args)
-    {
+    public static void main(final String[] args) {
+    //Scanner maethod of reading input    
         Scanner sc = new Scanner(System.in);
         //sc.nextLine();
         int n = Integer.parseInt(sc.nextLine());
