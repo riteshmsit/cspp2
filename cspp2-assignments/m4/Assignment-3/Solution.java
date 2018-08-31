@@ -22,7 +22,7 @@ final class Solution
 		}
 	}
 	public static String binaryToDecimal(String s) {
-		Integer d = Integer.valueOf(s);
+		int d = Integer.parseInt(s);
 		int last_digit, decimal_value = 0, i = 0;
 		while (d != 0) {
 			last_digit = d % 10;
