@@ -17,8 +17,13 @@ final class Solution {
     private Solution() {
 
     }
+    /**.
+     * { Main function }
+     *
+     * @param      args  Command Line Arguments
+     */
     public static void main(final String[] args) {
-    //Scanner maethod of reading input    
+    //Scanner maethod of reading input
         Scanner sc = new Scanner(System.in);
         //sc.nextLine();
         int n = Integer.parseInt(sc.nextLine());
@@ -26,7 +31,7 @@ final class Solution {
             String s = sc.nextLine();
             long res = binaryToDecimal(s);
             System.out.println(res);
-        }         
+        }
     }
     /**.
      * { function to convert binary to decimal}
