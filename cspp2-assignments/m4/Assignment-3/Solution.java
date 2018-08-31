@@ -17,12 +17,12 @@ final class Solution
 		int n = Integer.parseInt(sc.nextLine());
 		for (int i = 0; i < n; i++) {
 			String s = sc.nextLine();
-			String res = binaryToDecimal(s);
+			long res = binaryToDecimal(s);
 			System.out.println(res);
 		}
 				
 	}
-	public static String binaryToDecimal(String s) {
+	public static long binaryToDecimal(String s) {
 	    int binary_value = Integer.parseInt(s);
 		int last_digit, decimal_value = 0, i = 0;
 		while (binary_value != 0) {
@@ -31,7 +31,6 @@ final class Solution
 			i += 1;
 			binary_value = binary_value / 10;
 		}
-		String result = "" + decimal_value;
-		return result;	
+		return decimal_value;	
 	}
 }
