@@ -22,13 +22,13 @@ final class Solution
 		}
 	}
 	public static String binaryToDecimal(String s) {
-	    int d = Integer.parseInt(s);
+	    int binary_value = Integer.parseInt(s);
 		int last_digit, decimal_value = 0, i = 0;
-		while (d != 0) {
-			last_digit = d % 10;
+		while (binary_value != 0) {
+			last_digit = binary_value % 10;
 			decimal_value += last_digit * (2^i);
 			i += 1;
-			d = d / 10;
+			binary_value = binary_value / 10;
 		}
 		String result = "" + decimal_value;
 		return result;		
