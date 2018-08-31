@@ -9,9 +9,12 @@ final class Solution
     Do not modify this main function.
     */
     /**.
-     * Constructs the object.
+     * Initializing repeated value to variable.
      */
     public static final int D = 10;
+    /**
+     * Constructs the object.
+     */
     private Solution() {
 
     }
@@ -49,7 +52,7 @@ final class Solution
         long decimalvalue = 0;
         while (binaryvalue != 0) {
             lastdigit = binaryvalue % D;
-            decimalvalue += lastdigit * Math.pow(2,i);
+            decimalvalue += lastdigit * Math.pow(2, i);
             i += 1;
             binaryvalue = binaryvalue / D;
         }
