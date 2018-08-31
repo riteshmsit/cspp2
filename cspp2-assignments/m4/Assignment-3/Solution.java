@@ -30,7 +30,7 @@ final class Solution
 			i += 1;
 			d = d / 10;
 		}
-		String result = decimal_value + "";
+		String result = "" + decimal_value;
 		return result;		
 	}
 }
