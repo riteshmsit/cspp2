@@ -11,6 +11,7 @@ final class Solution
     /**.
      * Constructs the object.
      */
+    public static final int D = 10;
     private Solution() {
 
     }
@@ -43,16 +44,16 @@ final class Solution
         //}
         //String res = Integer.toString(decimal);
         //return res;
-        long binary_value = Long.parseLong(s);
-        long last_digit, i = 0;
-        long decimal_value = 0;
-        while (binary_value != 0) {
-            last_digit = binary_value % 10;
-            decimal_value += last_digit * Math.pow(2,i);
+        long binaryvalue = Long.parseLong(s);
+        long lastdigit, i = 0;
+        long decimalvalue = 0;
+        while (binaryvalue != 0) {
+            lastdigit = binaryvalue % D;
+            decimalvalue += lastdigit * Math.pow(2,i);
             i += 1;
-            binary_value = binary_value / 10;
+            binaryvalue = binaryvalue / D;
         }
-        return decimal_value;
+        return decimalvalue;
     }
 }
 
