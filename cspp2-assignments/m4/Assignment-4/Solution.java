@@ -1,9 +1,10 @@
 //Program to reverse a string
 import java.util.Scanner;
-/**
+/**.
  * { class of the program }
  */
-final class Solution {/*
+final class Solution {
+/*
     Do not modify the main function
     */
     private Solution() {
