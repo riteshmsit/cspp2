@@ -24,7 +24,7 @@ final class Solution
 	}
 	public static long binaryToDecimal(String s) {
 	    int binary_value = Integer.parseInt(s);
-		int last_digit, decimal_value = 0, i = 0;
+		long last_digit, decimal_value = 0, i = 0;
 		while (binary_value != 0) {
 			last_digit = binary_value % 10;
 			decimal_value += last_digit * Math.pow(2,i);
