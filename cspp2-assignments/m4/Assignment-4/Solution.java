@@ -7,6 +7,9 @@ final class Solution {
 /*
     Do not modify the main function
     */
+    /**.
+     * Constructs the object.
+     */
     private Solution() {
 
     }
@@ -19,7 +22,7 @@ final class Solution {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
         String reverse = reverseString(s);
-        System.out.println(reverse);   
+        System.out.println(reverse);
     }
     /**.
      * { To reverse a string }
@@ -29,10 +32,10 @@ final class Solution {
      * @return     { Reverse string }
      */
     public static String reverseString(final String s) {
-        String reverse_string = "";
-        for (int i = s.length() - 1 ; i >= 0; i--) {
-            reverse_string += s.charAt(i);
+        String reversestring = "";
+        for (int i = s.length() - 1; i >= 0; i--) {
+            reversestring += s.charAt(i);
         }
-        return reverse_string;
+        return reversestring;
     }
 }
