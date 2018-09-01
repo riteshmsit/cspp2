@@ -19,9 +19,9 @@ public final class Solution {
      */
     static void oddComposites(final int n) {
 	// write your code here
-    	for (int i = 3; i <= n; i += 2) {
+    	for (long i = 3; i <= n; i += 2) {
     		int flag = 0;
-    		for (int j = 2; j <= i; j += 1) {
+    		for (long j = 2; j <= i; j += 1) {
     			if (i % j == 0) {
     				flag = 1;
     			}
