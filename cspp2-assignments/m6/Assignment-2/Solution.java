@@ -24,19 +24,28 @@ final class Solution {
      */
     static int[][] roundHundred(final int [][] a, final int rows, final int columns) {
 
-	// write ypur code here
-        int b[][] = new int[rows][columns];        
+	// write your code here
+        int b[][] = new int [rows][columns];     
         for (int i = 0; i < rows; i += 1) {
-            int k = 100;
             for (int j = 0; j < columns; j += 1) {
-                if (k - a[i][j] > 50 && k - a[i][j] < 100) {
-                    b[i][j] = k - 100;
+                b[i][j] = 100;       
+            }
+        }
+        return b;
+    }
+               /* if (a[i][j]/100 >= 1) {
+                    if (a[i][j] > 50) {
+                        b[i][j] = 100;
+                    }
+                    else (a[i][j] <    
+                        b[i][j] = 
+                    }
                 } 
                 if (k - a[i][j] == 0) {
                     b[i][j] = k;
                 } 
                 k += 100;
-            }
+            }*/
                 
                 /*for (int k = 100; k >= 400; k += 100) {
                     int diff = k - a[i][j];
@@ -49,9 +58,7 @@ final class Solution {
                         c[i][j] = k;
                     }
                 }*/
-        }
-        return b;
-    }
+        
     /**
      * Main function.
      *
