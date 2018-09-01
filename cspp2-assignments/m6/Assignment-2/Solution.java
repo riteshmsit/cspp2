@@ -12,9 +12,11 @@ final class Solution {
     /**.
      * { global }
      */
-    public final static int H = 100;
-    public final static int F = 50;
-    public final static int FIVE = 500;
+    final public static int H = 100;
+    // For 100 value
+    final public static int F = 50;
+    // For 50 value
+    final public static int FIVE = 500;
     /**.
      * Constructs the object.
      */
