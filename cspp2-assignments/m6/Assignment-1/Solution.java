@@ -23,11 +23,8 @@ public final class Solution {
     		int flag = 0;
     		for (long j = 2; j <= i; j += 1) {
     			if (i % j == 0) {
-    				flag = 1;
+    				System.out.println(i);;
     			}
-    		}
-    		if (flag == 1) {
-    			System.out.println(i);;
     		}
     	}
     }
