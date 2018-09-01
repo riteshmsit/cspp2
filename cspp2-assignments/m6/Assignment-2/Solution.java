@@ -34,13 +34,12 @@ final class Solution {
                     } else if (k - a[i][j] == 0) {
                         c[i][j] = k;
                     } else {
-                        c[i][j] = k - 100;
+                        c[i][j] = k;
                     }
                 }
             }
         }
         return c;
-	
     }
     /**
      * Main function.
