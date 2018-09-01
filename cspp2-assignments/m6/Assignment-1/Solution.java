@@ -23,9 +23,10 @@ public final class Solution {
     		int flag = 0;
     		for (int j = 2; j <= i/2; j += 1) {
     			if (i % j == 0) {
-    				System.out.println(i);;
+    				flag = 1;
     			}
     		}
+            if (flag == 1) System.out.println(i);
     	}
     }
     /**
