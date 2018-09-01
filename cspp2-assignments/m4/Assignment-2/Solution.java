@@ -44,7 +44,7 @@ final class Solution {
                     c[i][j] = a[i][j] + b[i][j];
                     st += c[i][j] + " ";
             }
-                System.out.println(st.substring(0, st.length() - 1));
+                System.out.println(st.trim());
         }
         }
     }
