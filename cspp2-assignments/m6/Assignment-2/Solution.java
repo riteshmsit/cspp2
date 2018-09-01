@@ -33,12 +33,10 @@ final class Solution {
                     b[i][j] = k - 100;
                 } else if (k - a[i][j] == 0) {
                     b[i][j] = 0;
-                } else if (k - a[i][j] < 50 && k - a[i][j] < 100) {
-                    b[i][j] = k;
                 } else {
-                    b[i][j] = 0;
+                    k += 100;
                 }
-                k += 100;
+                
                 /*for (int k = 100; k >= 400; k += 100) {
                     int diff = k - a[i][j];
                     if (diff)*/
