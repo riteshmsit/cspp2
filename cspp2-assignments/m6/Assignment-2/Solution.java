@@ -28,7 +28,7 @@ final class Solution {
         int [][] c = new int[rows][columns];
         for (int i = 0; i<rows; i++) {
             for(int j = 0; j<columns; j++) {
-                c[i][j] = ((a[i][j] + 99) /100) * 100;
+                c[i][j] = (((a[i][j] + 99) /100) * 100) - 100;
             }
         }
         return c;
