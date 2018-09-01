@@ -9,6 +9,7 @@ final class Solution {
     /**.
      * Constructs the object.
      */
+    final static int H = 100;
     private Solution() {
         //not used
     }
@@ -22,19 +23,19 @@ final class Solution {
      *
      * @return     Matrix of the rounded elements
      */
-    static int[][] roundHundred(final int [][] a, 
+    static int[][] roundHundred(final int [][] a,
         final int rows, final int columns) {
 
 	// write your code here
-        int [][] c = new int[rows][columns];
+        int [][] c = new int [rows][columns];
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                for (int k = 100; k<=500; k+=100) {
-                    if (k - a[i][j] > 50 && k - a[i][j] < 100) {
-                        c[i][j] = k - 100;
+                for (int k = H; k <= 500; k += H) {
+                    if (k - a[i][j] > 50 && k - a[i][j] < H) {
+                        c[i][j] = k - H;
                     } else if (k - a[i][j] == 0) {
                         c[i][j] = k;
-                    } else if (k - a[i][j] < 50 && k - a[i][j] < 100) {
+                    } else if (k - a[i][j] < 50 && k - a[i][j] < H) {
                         c[i][j] = k;
                       }
                 }
