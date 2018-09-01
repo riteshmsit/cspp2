@@ -9,7 +9,7 @@ public final class Solution {
     /**
     * Empty constructor.
     */
-    public final static int T = 3;
+    public static final int T = 3;
     /**.
      * Constructs the object.
      */
@@ -45,4 +45,6 @@ public final class Solution {
         oddComposites(n);
     }
 }
+
+
 
