@@ -22,24 +22,24 @@ final class Solution {
      *
      * @return     Matrix of the rounded elements
      */
-    static int[][] roundHundred(final int [][] a, final int rows, final int columns) {
+    static int[][] roundHundred(int [][] a, final int rows, final int columns) {
 
 	// write ypur code here
-        int b[][] = new int[rows][columns];
+        //int b[][] = new int[rows][columns];
         for (int i = 0; i < rows; i += 1) {
             for (int j = 0; j < columns; j += 1) {
-                for (int k = 100; k >= 300; k += 100) {
-                    if (k - a[i][j] > 50) {
-                        b[i][j] = k;
+                for (int k = 100; k >= 300; k += 1) {
+                    if (k - a[i][j] > 50 && k - a[i][j] < 100) {
+                        a[i][j] = k;
                     } else if (k - a[i][j] == 0) {
-                        b[i][j] = k;
+                        a[i][j] = k;
                     } else {
-                        b[i][j] = k - 100;
+                        a[i][j] = k - 100;
                     }
                 }
             }
         }
-        return b;
+        return a;
 	
     }
     /**
