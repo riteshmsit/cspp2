@@ -3,10 +3,10 @@ import java.util.Scanner;
  * Write a java program to round the
  * elements of a matrix to the nearest 100.
  *
- * @author : 
+ * @author : ritesh babu veluvolu
  */
 final class Solution {
-    /**
+    /**.
      * Constructs the object.
      */
     private Solution() {
