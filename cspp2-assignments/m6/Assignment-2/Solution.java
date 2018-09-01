@@ -30,13 +30,13 @@ final class Solution {
             for(int j = 0; j<columns; j++) {
                 for (int k = 100; k >= 400; k += 100) {
                     if (k - a[i][j] > 50 && k - a[i][j] < 100) {
-                        c[i][j] = k;
+                        c[i][j] += 100;
                         break;
                     } if (k - a[i][j] == 0) {
-                        c[i][j] = k;
+                        c[i][j] += k;
                         break;
                     } if (k - a[i][j] < 50 && k - a[i][j] < 100){
-                        c[i][j] = k;
+                        c[i][j] += k;
                         break;
                     } 
                 }
