@@ -31,11 +31,12 @@ final class Solution {
             for (int j = 0; j < columns; j += 1) {
                 if (k - a[i][j] > 50 && k - a[i][j] < 100) {
                     b[i][j] = k - 100;
-                } else if (k - a[i][j] == 0) {
+                } 
+                if (k - a[i][j] == 0) {
                     b[i][j] = 0;
-                } else {
-                    k += 100;
-                }
+                } 
+                k += 100;
+            }
                 
                 /*for (int k = 100; k >= 400; k += 100) {
                     int diff = k - a[i][j];
@@ -48,7 +49,6 @@ final class Solution {
                         c[i][j] = k;
                     }
                 }*/
-            }
         }
         return b;
     }
