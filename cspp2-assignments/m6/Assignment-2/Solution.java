@@ -9,9 +9,15 @@ final class Solution {
     /**.
      * Constructs the object.
      */
-    final static int H = 100;
-    final static int F = 50;
-    final static int FIVE = 500;
+    /**.
+     * { global }
+     */
+    public final static int H = 100;
+    public final static int F = 50;
+    public final static int FIVE = 500;
+    /**.
+     * Constructs the object.
+     */
     private Solution() {
         //not used
     }
