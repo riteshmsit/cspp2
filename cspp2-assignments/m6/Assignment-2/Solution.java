@@ -25,14 +25,27 @@ final class Solution {
     static int[][] roundHundred(final int [][] a, final int rows, final int columns) {
 
 	// write your code here
-        int b[][] = new int [rows][columns];     
-        for (int i = 0; i < rows; i += 1) {
-            for (int j = 0; j < columns; j += 1) {
-                b[i][j] = 100;       
+        int [][] c = new int[rows][columns];
+        for (int i = 0; i<rows; i++) {
+            for(int j = 0; j<columns; j++) {
+                for (int k = 100; k >= 400; k += 100) {
+                    if (k - a[i][j] > 50 && k - a[i][j] < 100) {
+                        c[i][j] = k;
+                        break;
+                    } if (k - a[i][j] == 0) {
+                        c[i][j] = k;
+                        break;
+                    } if (k - a[i][j] < 50 && k - a[i][j] < 100){
+                        c[i][j] = k;
+                        break;
+                    } 
+                }
             }
         }
-        return b;
+        return c;
     }
+        
+        
                /* if (a[i][j]/100 >= 1) {
                     if (a[i][j] > 50) {
                         b[i][j] = 100;
@@ -47,19 +60,9 @@ final class Solution {
                 k += 100;
             }*/
                 
-                /*for (int k = 100; k >= 400; k += 100) {
-                    int diff = k - a[i][j];
-                    if (diff)*/
-                   /* if (k - a[i][j] > 50 && k - a[i][j] < 100) {
-                        c[i][j] = k;
-                    } else if (k - a[i][j] == 0) {
-                        c[i][j] = k;
-                    } else {
-                        c[i][j] = k;
-                    }
-                }*/
+             
         
-    /**
+    /**.
      * Main function.
      *
      * @param      args  The arguments
