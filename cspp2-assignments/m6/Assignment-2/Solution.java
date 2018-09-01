@@ -28,8 +28,8 @@ final class Solution {
     static int[][] roundHundred(final int[][] a,
         final int rows, final int columns) {
 
-	// write your code here
-        int[][] c = new int [rows][columns];
+    // write your code here
+        int[][] c = new int[rows][columns];
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
                 for (int k = H; k <= FIVE; k += H) {
@@ -44,7 +44,7 @@ final class Solution {
                 }
         }
         return c;
-    }    
+    }
     /**.
      * Main function.
      *
