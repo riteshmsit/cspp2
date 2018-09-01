@@ -27,16 +27,14 @@ final class Solution {
 	// write ypur code here
         for (int i = 0; i < rows; i += 1) {
             for (int j = 0; j < columns; j += 1) {
-                for (int k = 100; k <= 300; k++) {
+                for (int k = 100; k >= 300; k += 1) {
                     if (k - a[i][j] > 50 && k - a[i][j] < 100) {
                         a[i][j] = k;
                         break;
                     } else if (k - a[i][j] == 0) {
                         a[i][j] = k;
-                        break;
                     } else {
-                        a[i][j] = 0;
-                        break;
+                        a[i][j] = k - 100;
                     }
                 }
             }
