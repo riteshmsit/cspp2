@@ -26,18 +26,33 @@ final class Solution {
 
 	// write your code here
         int [][] c = new int[rows][columns];
-        for (int i = 0; i<rows; i++) {
-            for(int j = 0; j<columns; j++) {
-                if (a[i][j]/100 > 0) {
+        for (int i = 0; i < rows; i++) {
+            for(int j = 0; j < columns; j++) {
+                for(int k = 100; k<=500; k+=100) {
+                    if (k - a[i][j] > 50 && k - a[i][j] < 100) {
+                        c[i][j] = k;
+                    } else if (k - a[i][j] == 0) {
+                        c[i][j] = k;
+                    } else if (k - a[i][j] < 50 && k - a[i][j] < 100) {
+                        c[i][j] = k - 100;
+                      }
+                }
+                }
+        }
+        return c;
+    }
+
+                /*if (a[i][j]/100 > 0) {
                     c[i][j] = (((a[i][j] + 99) /100) * 100);
                 } else {
                     c[i][j] = (((a[i][j] + 99) /100) * 100) - 100;
 
+                
                 }
+                }
+
             }
-        }
-        return c;
-    }
+        }*
         
         
                /* if (a[i][j]/100 >= 1) {
