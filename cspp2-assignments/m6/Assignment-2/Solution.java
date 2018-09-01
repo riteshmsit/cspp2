@@ -30,10 +30,13 @@ final class Solution {
                 for (int k = 100; k <= 300; k++) {
                     if (k - a[i][j] > 50 && k - a[i][j] < 100) {
                         a[i][j] = k;
+                        break;
                     } else if (k - a[i][j] == 0) {
                         a[i][j] = k;
+                        break;
                     } else {
-                        a[i][j] = k - 100;
+                        a[i][j] = 0;
+                        break;
                     }
                 }
             }
