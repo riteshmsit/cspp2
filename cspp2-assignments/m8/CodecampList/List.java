@@ -1,6 +1,5 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-import java.util.Arrays;
 public class List {
     //Implement all the methods mentioned to build a ListADT
     /*
@@ -87,12 +86,12 @@ public class List {
         //a.add(item);
         a[size] = item;
         size += 1;
-    }   
+    }
     /*
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
      * to the objects outside the list
-     * 
+     *
      * The method returns an int. Empty list should return 0.
      */
     public int size() {
@@ -145,7 +144,7 @@ public class List {
      * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
      */
-    public int get(int index){
+    public int get(int index) {
         // Replace the code below to write the code for get
         //throw new Exception("");
         if (index < size) {
