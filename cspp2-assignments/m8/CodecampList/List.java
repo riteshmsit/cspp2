@@ -26,9 +26,7 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    // magic number
     public static final int T = 10;
-    //array a
     private int[] a;
     // declare a private int[]
     // don't create the array yet using new
