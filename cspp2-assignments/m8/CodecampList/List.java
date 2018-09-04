@@ -26,12 +26,17 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
+    /*
+    magic number
+    */
     public static final int T = 10;
+    /*
+     *array
+    */
     private int[] a;
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
-
     /*
      * What are the other class variables needed for creating a list?
      * How about keeping track of the size of the list?
@@ -51,6 +56,9 @@ public class List {
      * to be accessed by the methods that are outside of the List class.
      *
      */
+    /*
+    size of array
+    */
     private int size;
     // declare a private int size
     // again, don't initialize it here
