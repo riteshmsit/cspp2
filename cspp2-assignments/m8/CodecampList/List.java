@@ -4,7 +4,7 @@ import java.util.Scanner;
  * List of .
  */
 public class List {
-    //Implement all the methods mentioned to build a ListADT
+        //Implement all the methods mentioned to build a ListADT
     /*
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
@@ -26,9 +26,15 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
+    /**
+     * { var_description }.
+     */
     public static final int T = 10;
+    /**
+     * { var_description }.
+     */
     private int[] a;
-    // declare a private int[]
+        // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
 
@@ -51,6 +57,10 @@ public class List {
      * to be accessed by the methods that are outside of the List class.
      *
      */
+
+    /**
+     * { var_description }.
+     */
     private int size;
     // declare a private int size
     // again, don't initialize it here
@@ -58,6 +68,9 @@ public class List {
     /*
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
+     */
+    /**
+     * Constructs the object.
      */
     public List() {
 
@@ -84,6 +97,11 @@ public class List {
      *
      * The method returns void (nothing)
      */
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item.
+     */
     public void add(final int item) {
         //Inserts the specified element at the end of the list.
         //a.add(item);
@@ -96,6 +114,11 @@ public class List {
      * to the objects outside the list
      *
      * The method returns an int. Empty list should return 0.
+     */
+    /**
+     * { function_description }.
+     *
+     * @return     { description_of_the_return_value }
      */
     public int size() {
         // replace the code below to implement the size method
@@ -121,6 +144,11 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
+    /**
+     * { function_description }.
+     *
+     * @param      index  The index
+     */
     public void remove(final int index) {
         if (index < size) {
             for (int i = index; i < size - 1; i++) {
@@ -132,9 +160,8 @@ public class List {
             System.out.println("Invalid Position Exception");
         }
     }
-
-        // write the logic for remove here.
-        // Think about what to do to the size variable.
+    // write the logic for remove here.
+    // Think about what to do to the size variable.
     /*
      * Get method has to return the items that is
      * at the index position passed as an argument to the method.
@@ -146,6 +173,13 @@ public class List {
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
+    /**
+     * { function_description }.
+     *
+     * @param      index  The index.
+     *
+     * @return     { description_of_the_return_value }.
+     */
     public int get(final int index) {
         // Replace the code below to write the code for get
         //throw new Exception("");
@@ -154,8 +188,7 @@ public class List {
         }
         return -1;
     }
-
-    /*
+        /*
      * What happens when you print an object using println?
      * Java provides a method named toString that is internally
      * invoked when an object variable is used in println.
@@ -175,6 +208,11 @@ public class List {
      * not all the elements of the array.
      *
      */
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         // Replace the code below
         String s1 = "[";
@@ -189,6 +227,13 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item.
+     *
+     * @return     { description_of_the_return_value }.
+     */
     public boolean contains(final int item) {
         // Replace the code below
         if (indexOf(item) >= 0) {
@@ -201,6 +246,13 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
+    /**
+     * Searches for the first match.
+     *
+     * @param      item  The item.
+     *
+     * @return     { description_of_the_return_value }.
+     */
     public int indexOf(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
@@ -210,6 +262,11 @@ public class List {
         }
         return -1;
     }
+    /**
+     * { function_description }.
+     *
+     * @param      args  The arguments.
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
