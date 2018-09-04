@@ -1,5 +1,8 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
+/**.
+ * List of .
+ */
 public class List {
     //Implement all the methods mentioned to build a ListADT
     /*
@@ -88,7 +91,7 @@ public class List {
      *
      * @param      item  The item
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
         //a.add(item);
         a[size] = item;
