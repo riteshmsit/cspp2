@@ -45,7 +45,7 @@ public class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
+     *
      */
     private int size;
     // declare a private int size
@@ -69,7 +69,6 @@ public class List {
         // That is the initial value to use for size.
         size = 0;
     }
-    
     /*
      * The add method does what the name suggests.
      * Add an int item to the list.
@@ -78,7 +77,7 @@ public class List {
      * Is it the same as the end of the array?
      * Think about how you can use the size variable to add item
      * to the list.
-     * 
+     *
      * The method returns void (nothing)
      */
     public void add(int item) {
@@ -178,7 +177,7 @@ public class List {
         for (int i = 0; i < size - 1; i++) {
             s1 += a[i] + ",";
         }
-        return s1 + a[size - 1]+ "]";
+        return s1 + a[size - 1] + "]";
     }
     /*
      * Contains return true if the list has
@@ -207,7 +206,7 @@ public class List {
         }
         return -1;      
     }
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
