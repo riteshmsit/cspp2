@@ -23,7 +23,9 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
+    // magic number
     public static final int T = 10;
+    //array a
     private int[] a;
     // declare a private int[]
     // don't create the array yet using new
@@ -133,7 +135,7 @@ public class List {
      *
      * @param      index  The index
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         if (index < size) {
             for (int i = index; i < size - 1; i++) {
                 a[i] = a[i + 1];
@@ -220,7 +222,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         // Replace the code below
         if (indexOf(item) >= 0) {
             return true;
