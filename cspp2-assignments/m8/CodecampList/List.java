@@ -23,6 +23,7 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
+    public static final int T = 10;
     private int[] a;
     // declare a private int[]
     // don't create the array yet using new
@@ -62,7 +63,7 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        a = new int[10];
+        a = new int[T];
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
@@ -101,7 +102,7 @@ public class List {
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
      * It also does an additional step.
-     * Think about what happens when 
+     * Think about what happens when
      * an item is removed from the middle of the list
      * It creates a hole in the list, right?
      * This would mean, all the items that are
@@ -142,7 +143,7 @@ public class List {
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
-    public int get(int index) {
+    public int get(final int index) {
         // Replace the code below to write the code for get
         //throw new Exception("");
         if (index < size) {
@@ -193,7 +194,7 @@ public class List {
         return false;
     }
     /*
-     * Returns the index of the first occurrence 
+     * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
@@ -204,7 +205,7 @@ public class List {
                 return i;
             }
         }
-        return -1;      
+        return -1;
     }
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
