@@ -119,9 +119,9 @@ public class List {
      * The method returns void (nothing)
      */
     public void remove(int index) {
-        if(index < size) {
-            for (int i = index; i <size - 1; i++) {
-                a[i] = a[i+1];
+        if (index < size) {
+            for (int i = index; i < size - 1; i++) {
+                a[i] = a[i + 1];
             }
             size--;
             a[size] = 0;
@@ -132,7 +132,6 @@ public class List {
 
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        
     /*
      * Get method has to return the items that is
      * at the index position passed as an argument to the method.
@@ -141,7 +140,7 @@ public class List {
      * How can an element not be there at a given position?
      * Well, if the position is greater than the number of items
      * in the list then that would mean the item doesn't exist.
-     * How do we check if the position is greater than the 
+     * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
     public int get(int index) {
@@ -149,7 +148,7 @@ public class List {
         //throw new Exception("");
         if (index < size) {
             return a[index];
-        }  
+        }
         return -1;
     }
 
@@ -162,7 +161,7 @@ public class List {
      * System.out.println(l);
      * This statement is a shortcut for
      * System.out.println(l.toString());
-     * 
+     *
      * So, implement the toString method to display the items
      * in the list in the square brackets notation.
      * i.e., if the list has numbers 1, 2, 3
@@ -180,8 +179,7 @@ public class List {
             s1 += a[i] + ",";
         }
         return s1 + a[size - 1]+ "]";
-    } 
-    
+    }
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
