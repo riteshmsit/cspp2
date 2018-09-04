@@ -81,7 +81,7 @@ public class List {
      *
      * The method returns void (nothing)
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
         //a.add(item);
         a[size] = item;
@@ -118,7 +118,7 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         if (index < size) {
             for (int i = index; i < size - 1; i++) {
                 a[i] = a[i + 1];
@@ -186,7 +186,7 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         // Replace the code below
         if (indexOf(item) >= 0) {
             return true;
