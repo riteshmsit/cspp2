@@ -29,8 +29,8 @@ public class Fibonacci
         List fibobj = new List(n);
         int term1 = 0;
         int term2 = 1;
-        fibobj.add(term1);
-        fibobj.add(term2);
+        //fibobj.add(term1);
+        //fibobj.add(term2);
         for (int i = 2; i < n; i++) {
         	int temp = term2;
         	temp = fibobj.get(i - 1) + fibobj.get(i - 2);
