@@ -29,11 +29,12 @@ public class Fibonacci
         List fibobj = new List(n);
         int term1 = 0;
         int term2 = 1;
-        for (int i = 0; i < n; i++) {
+        fibobj.add(term1);
+        fibobj.add(term2);
+        for (int i = 2; i < n; i++) {
         	int temp = term2;
+        	temp = fibobj.get(i - 1) + fibobj.get(i - 2);
         	fibobj.add(temp);
-        	term2 = term1 + term2;
-        	term1 = temp;
         }
         return fibobj;
     }
