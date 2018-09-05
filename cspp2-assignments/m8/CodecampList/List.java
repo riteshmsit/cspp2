@@ -173,14 +173,14 @@ public class List {
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
-    /**
+    /**.
      * { function_description }.
      *
      * @param      index  The index.
      *
      * @return     { description_of_the_return_value }.
      */
-    public int get(final int index){
+    public int get(final int index) {
         // Replace the code below to write the code for get
         //throw new Exception("");
         if (index <= size) {
@@ -286,6 +286,12 @@ public class List {
     public void addAll(final int[] items) {
 
     }
+    /**.
+     * { function_description }
+     *
+     * @param      index  The index
+     * @param      item   The item
+     */
     public void add(final int index, final int item) {
         for (int i = size; i >= index; i--) {
             a[i + 1] = a[i];
