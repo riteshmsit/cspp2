@@ -24,6 +24,13 @@ public class Fibonacci
      *
      * Look for the hint.txt if some of the testcases fail.
      */
+    /**.
+     * { function_description }
+     *
+     * @param      n     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public static List fib(int n) {
         // todo - complete this method
         List fibobj = new List(n);
