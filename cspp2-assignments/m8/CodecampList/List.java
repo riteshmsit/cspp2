@@ -183,7 +183,7 @@ public class List {
     public int get(final int index){
         // Replace the code below to write the code for get
         //throw new Exception("");
-        if (index <= size || index < 0) {
+        if (index <= size) {
             return a[index];
         }
         return -1;
@@ -262,6 +262,13 @@ public class List {
         }
         return -1;
     }
+    /**.
+     * { function_description }
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int count(final int item) {
         int count = 0;
         for (int i = 0; i < size; i++) {
@@ -271,6 +278,11 @@ public class List {
         }
         return count;
     }
+    /**.
+     * Adds all.
+     *
+     * @param      items  The items
+     */
     public void addAll(final int[] items) {
 
     }
