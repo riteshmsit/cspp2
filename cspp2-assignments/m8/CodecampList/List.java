@@ -180,10 +180,10 @@ public class List {
      *
      * @return     { description_of_the_return_value }.
      */
-    public int get(final int index) {
+    public int get(final int index){
         // Replace the code below to write the code for get
         //throw new Exception("");
-        if (index < size) {
+        if (index <= size || index < 0) {
             return a[index];
         }
         return -1;
@@ -262,6 +262,25 @@ public class List {
         }
         return -1;
     }
+    public int count(final int item) {
+        int count = 0;
+        for (int i = 0; i < size; i++) {
+            if (a[i] == item) {
+                count += 1;
+            }
+        }
+        return count;
+    }
+    public void addAll(final int[] items) {
+
+    }
+    public void add(final int index, final int item) {
+        for (int i = size; i >= index; i--) {
+            a[i + 1] = a[i];
+        }
+        a[index] = item;
+        size += 1;
+    }
     /**
      * { function_description }.
      *
@@ -313,6 +332,9 @@ public class List {
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
+                //case "count":
+                //System.out.println(l.count(IntegerparseInt(tokens[1])));
+                //case "add"
                 default :
             }
         }
