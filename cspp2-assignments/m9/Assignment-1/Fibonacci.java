@@ -15,6 +15,9 @@ import java.util.Scanner;
  * by invoking the add method provided in the List ADT.
  *
  */
+/**.
+ * Class for fibonacci.
+ */
 public class Fibonacci
 {
     /*
@@ -39,13 +42,18 @@ public class Fibonacci
         fibobj.add(term1);
         fibobj.add(term2);
         for (int i = 2; i < n; i++) {
-        	int temp = term2;
-        	temp = fibobj.get(i - 1) + fibobj.get(i - 2);
-        	fibobj.add(temp);
+            int temp = term2;
+            temp = fibobj.get(i - 1) + fibobj.get(i - 2);
+            fibobj.add(temp);
         }
         return fibobj;
     }
-	public static void main(String[] args) {
+    /**.
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         System.out.println(fib(n));
