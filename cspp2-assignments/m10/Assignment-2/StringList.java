@@ -81,7 +81,7 @@ public class StringList implements StringListInterface {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new String[10];
+        list = new String[100];
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -106,10 +106,15 @@ public class StringList implements StringListInterface {
      */
 
     // todo - add an overloaded constructor here
-    StringList(int y) {
-        list = new String[y];
-    }
-
+    /*public list(int capacity) {
+        size = 0;
+        list = new int[capacity];
+    }*/
+    /*public void addAll(final int[] items) {
+        for(int i =0; i <items.length; i++) {
+            add(items[i]);
+        }
+    }*/
     
     /*
      * The add method does what the name suggests.
@@ -124,12 +129,18 @@ public class StringList implements StringListInterface {
      */
     public void add(String item) {
         //Inserts the specified element at the end of the list.
-        list[size++] = item;
-       
+        if (size == list.length) {
+            list = resize();
+            list[size++] = item;
+        } else{
+            list[size++] = item;
+        }
     }
     /*Inserts all the elements of specified int 
     array to the end of list*/
-   
+    private String[] resize(){
+        return Arrays.copyOf(list, 2*list.length);
+    }
     public void addAll(String[] items) {
         for (int i = size, j = 0; j < items.length; i++, j++) {
             list[i] = items[j];
@@ -171,12 +182,11 @@ public class StringList implements StringListInterface {
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if (index < size) {
+        if (index >=0 && index < size) {
             for (int i = index; i < size -1; i++) {
                 list[i] = list[i + 1];
         }
-            size--;
-            list[size] = "null";       
+            size--;   
         } else {
             System.out.println("Invalid Position Exception");
         }
