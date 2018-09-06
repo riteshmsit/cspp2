@@ -1,6 +1,10 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 /**.
+ * { var_description }
+ */
+
+/**.
  * List of .
  */
 public class List {
@@ -43,7 +47,8 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new int[10];
+        final int T = 10;
+        list = new int[T];
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
@@ -112,7 +117,7 @@ public class List {
      * with the contents of the original array.
      *
      * TODO
-     * Create a method called resize(). Resize should create an new array that is
+     * Create a method called resize(). 
      * double the size of the old array.
      * Then copy the contents of the old array to the new one.
      *
@@ -120,7 +125,7 @@ public class List {
      * Will the client invoke resize or is it internal to List class?
      * Should the resize be public method or private?
      * Should the resize method return any values?
-     * You know enough of Object Oriented Programming to answer these questions :-)
+     *
      *
      */
     // todo create resize method
@@ -392,6 +397,7 @@ public class List {
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
+                default :
             }
         }
     }
