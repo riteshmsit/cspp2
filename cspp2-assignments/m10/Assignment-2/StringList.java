@@ -82,7 +82,6 @@ public class StringList implements StringListInterface {
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
         list = new String[100];
-
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
@@ -187,6 +186,7 @@ public class StringList implements StringListInterface {
                 list[i] = list[i + 1];
             }
             size--;
+            list[size] = null;
         } else {
             System.out.println("Invalid Position Exception");
         }
@@ -236,8 +236,7 @@ public class StringList implements StringListInterface {
         for (int i = 0; i < size -1; i++) {
             s1 = list[i] + ",";
         }
-        return s1 + list[size] + "]";
-       
+        return s1 + list[size] + "]";  
     }   
     /*
      * Contains return true if the list has
