@@ -130,9 +130,9 @@ public class List<E> {
     public String toString() {
        String s1 = "[";
         for (int i = 0; i < size -1; i++) {
-            s1 = list[i] + ",";
+            s1 += list[i] + ",";
         }
-        return s1 + list[size] + "]";
+        return s1 + list[size - 1] + "]";
     }
     /*
      * Contains return true if the list has
