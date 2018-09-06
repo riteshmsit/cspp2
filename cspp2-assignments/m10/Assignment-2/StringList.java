@@ -233,11 +233,10 @@ public class StringList implements StringListInterface {
      */
     public String toString() {
         String s1 = "[";
-        int i;
-        for (i = 0; i < size -1; i++) {
+        for (int i = 0; i < size -1; i++) {
             s1 = list[i] + ",";
         }
-        return s1 + list[i] + "]";
+        return s1 + list[size] + "]";
        
     }
     
