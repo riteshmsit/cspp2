@@ -138,7 +138,7 @@ public class StringList implements StringListInterface {
     }
     /*Inserts all the elements of specified int 
     array to the end of list*/
-    private String[] resize(){
+    private String[] resize() {
         return Arrays.copyOf(list, 2*list.length);
     }
     public void addAll(String[] items) {
@@ -187,7 +187,7 @@ public class StringList implements StringListInterface {
                 list[i] = list[i + 1];
         }
             size--;
-            list[size] = "null";
+            
         } else {
             System.out.println("Invalid Position Exception");
         }
