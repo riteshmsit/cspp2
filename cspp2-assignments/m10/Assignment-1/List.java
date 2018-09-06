@@ -47,7 +47,7 @@ public class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
+     *
      */
     /**.
      * { var_description }
@@ -331,7 +331,7 @@ public class List {
      */
     public int count(final int item)
     {
-         // write the logic 
+         // write the logic
         int count = 0;
         for (int i = 0; i < size; i++) {
             if (list[i] == item) {
@@ -360,14 +360,15 @@ public class List {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                case "add":
-                if((tokens.length) == 2){
+                if ((tokens.length) == 2){
                 String[] t = tokens[1].split(",");
-                if(t.length == 1){
+                if (t.length == 1){
                     l.add(Integer.parseInt(tokens[1]));
                 }
-                else{
-                    if(t.length > 1)
+                else {
+                    if (t.length > 1) {
                         l.add(Integer.parseInt(t[0]),Integer.parseInt(t[1]));
+                    }
                     }
                 }
                 break;
@@ -378,8 +379,9 @@ public class List {
                 if(tokens.length == 2){
                 String[] t1 = tokens[1].split(",");
                 int temp[] = new int[t1.length];
-                for(int i = 0; i < temp.length; i++)
+                for (int i = 0; i < temp.length; i++) {
                     temp[i] = Integer.parseInt(t1[i]);
+                }
                 l.addAll(temp);
                 }
                 break;
