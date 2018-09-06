@@ -286,6 +286,11 @@ public class List {
     /**.
      * { item_description }
      */
+    /**.
+     * Adds all.
+     *
+     * @param      items  The items
+     */
     public void addAll(final int[] items) {
         // write the logic
         int i, j;
@@ -354,8 +359,7 @@ public class List {
                 if ((tokens.length) == 2) {
                 String[] t = tokens[1].split(",");
                 if (t.length == 1) {
-                    l.add(Integer.parseInt(tokens[1]));
-                }
+                    l.add(Integer.parseInt(tokens[1])); }
                 else {
                     if (t.length > 1) {
                         l.add(Integer.parseInt(t[0]), Integer.parseInt(t[1]));
@@ -369,7 +373,7 @@ public class List {
                 case "addAll":
                 if (tokens.length == 2) {
                 String[] t1 = tokens[1].split(",");
-                int temp[] = new int[t1.length];
+                int[] temp = new int[t1.length];
                 for (int i = 0; i < temp.length; i++) {
                     temp[i] = Integer.parseInt(t1[i]);
                 }
