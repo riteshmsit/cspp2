@@ -128,7 +128,10 @@ public class List<E> {
      *
      */
     public String toString() {
-       String s1 = "[";
+        String s1 = "[";
+        if (size == 0) {
+            return "[]";
+        }
         for (int i = 0; i < size -1; i++) {
             s1 += list[i] + ",";
         }
