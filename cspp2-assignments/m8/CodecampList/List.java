@@ -344,7 +344,7 @@ public class List {
                 //try {
                 int t = l.get(Integer.parseInt(tokens[1]));
                 if (t != -1) {
-                	System.out.println(l.get(Integer.parseInt(tokens[1])));
+                    System.out.println(l.get(Integer.parseInt(tokens[1])));
                 }
                 //}
                 //catch(Exception e){
