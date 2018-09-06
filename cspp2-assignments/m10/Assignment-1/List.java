@@ -286,7 +286,7 @@ public class List {
     /**.
      * { item_description }
      */
-    public void addAll(final int items[]) {
+    public void addAll(final int[] items) {
         // write the logic
         int i, j;
         for (i = size, j = 0; j < items.length; i++, j++) {
