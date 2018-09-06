@@ -132,14 +132,14 @@ public class StringList implements StringListInterface {
         if (size == list.length) {
             list = resize();
             list[size++] = item;
-        } else{
+        } else {
             list[size++] = item;
         }
     }
     /*Inserts all the elements of specified int 
     array to the end of list*/
     private String[] resize() {
-        return Arrays.copyOf(list, 2*list.length);
+        return Arrays.copyOf(list, 2*size);
     }
     public void addAll(String[] items) {
         for (int i = size, j = 0; j < items.length; i++, j++) {
@@ -185,7 +185,7 @@ public class StringList implements StringListInterface {
         if (index >=0 && index < size) {
             for (int i = index; i < size -1; i++) {
                 list[i] = list[i + 1];
-        }
+            }
             size--;
         } else {
             System.out.println("Invalid Position Exception");
@@ -238,7 +238,7 @@ public class StringList implements StringListInterface {
         }
         return s1 + list[size] + "]";
        
-    }    
+    }   
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
@@ -263,6 +263,6 @@ public class StringList implements StringListInterface {
                 return i;
             }
         }
-    return 0;
+        return -1;
     }
 }
