@@ -47,8 +47,8 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        final int T = 10;
-        list = new int[T];
+        final int ten = 10;
+        list = new int[ten];
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
@@ -281,8 +281,7 @@ public class List {
     /**.
      * { item_description }
      */
-    public void addAll(final int items[])
-    {
+    public void addAll(final int items[]) {
         // write the logic
         int i, j;
         for (i = size, j = 0; j < items.length; i++, j++) {
@@ -317,8 +316,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int count(final int item)
-    {
+    public int count(final int item) {
          // write the logic
         int count = 0;
         for (int i = 0; i < size; i++) {
@@ -333,7 +331,7 @@ public class List {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -402,3 +400,5 @@ public class List {
         }
     }
 }
+
+
