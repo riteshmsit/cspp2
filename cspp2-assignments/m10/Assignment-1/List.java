@@ -49,16 +49,14 @@ public class List {
      * to be accessed by the methods that are outside of the List class.
      * 
      */
-    // declare a private int size
-    // again, don't initialize it here
-    // variable initialization should be done in the constructor
+    /**.
+     * { var_description }
+     */
     private int size;
-    /*
-     * The purpose of the constructor is to initialize the
-     * class variables with some default values.
+    /**.
+     * Constructs the object.
      */
     public List() {
-
         // what are the two variables to be initialized here?
         // think about the private variables described above.
         // What should be the default values?
