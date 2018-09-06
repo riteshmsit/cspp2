@@ -81,7 +81,7 @@ public class List {
      * The overloaded constructor is a way to initialize a list with
      * a list capacity of n items where n is given as an argument to
      * constructor.
-     * 
+     *
      */
     /**.
      * Constructs the object.
@@ -295,7 +295,7 @@ public class List {
      */
     public void addAll(final int items[])
     {
-        // write the logic 
+        // write the logic
         int i, j;
         for (i = size, j = 0; j < items.length; i++, j++) {
             list[i] = items[j];
@@ -360,14 +360,14 @@ public class List {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                case "add":
-                if ((tokens.length) == 2){
+                if ((tokens.length) == 2) {
                 String[] t = tokens[1].split(",");
-                if (t.length == 1){
+                if (t.length == 1) {
                     l.add(Integer.parseInt(tokens[1]));
                 }
                 else {
                     if (t.length > 1) {
-                        l.add(Integer.parseInt(t[0]),Integer.parseInt(t[1]));
+                        l.add(Integer.parseInt(t[0]), Integer.parseInt(t[1]));
                     }
                     }
                 }
