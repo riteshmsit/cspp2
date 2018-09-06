@@ -204,8 +204,8 @@ public class StringList implements StringListInterface {
      * number of items in the list? Would size variable be useful?
      */
     public String get(int index) {
-        if (index <= size) {
-            return list[index];
+        if (index <= size && index > 0) {
+            return list[index] + "";
         }
         return "-1";
         
@@ -238,8 +238,7 @@ public class StringList implements StringListInterface {
         }
         return s1 + list[size] + "]";
        
-    }
-    
+    }    
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
@@ -253,7 +252,6 @@ public class StringList implements StringListInterface {
             return false;
         }
     }
-
     /*
      * Returns the index of the first occurrence 
      * of the specified element in this list,
