@@ -233,11 +233,15 @@ public class StringList implements StringListInterface {
      */
     public String toString() {
         String s1 = "[";
-        for (int i = 0; i < size -1; i++) {
-            s1 += list[i] + ",";
-        }
+        if (size > 0) {
+            for (int i = 0; i < size -1; i++) {
+                s1 += list[i] + ",";
+            }
         return s1 + list[size - 1] + "]";  
-    }   
+        } else {
+            return "[]";
+        }
+    } 
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
