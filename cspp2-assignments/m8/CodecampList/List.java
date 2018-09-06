@@ -26,7 +26,7 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    /**
+    /**.
      * { var_description }.
      */
     public static final int T = 10;
@@ -144,7 +144,7 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-    /**
+    /**.
      * { function_description }.
      *
      * @param      index  The index
@@ -285,6 +285,7 @@ public class List {
      */
     public void addAll(final int[] items) {
 
+
     }
     /**.
      * { function_description }
@@ -341,7 +342,10 @@ public class List {
                 break;
                 case "get":
                 //try {
-                System.out.println(l.get(Integer.parseInt(tokens[1])));
+                int t = l.get(Integer.parseInt(tokens[1]));
+                if (t != -1) {
+                	System.out.println(l.get(Integer.parseInt(tokens[1])));
+                }
                 //}
                 //catch(Exception e){
 
