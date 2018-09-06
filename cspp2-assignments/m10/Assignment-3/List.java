@@ -52,9 +52,8 @@ public class List<E> {
     array to the end of list*/
     public void addAll(E[] items) {
         //Write logic for addAll method
-        for (int i = size, j = 0; j < items.length; i++, j++) {
-            list[size] = items[j];
-            size += 1;
+        for (int i = 0; i< items.length; i++) {
+            add(items[i]);
         }
     }
     /*
