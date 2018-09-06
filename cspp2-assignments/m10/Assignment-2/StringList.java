@@ -234,7 +234,7 @@ public class StringList implements StringListInterface {
     public String toString() {
         String s1 = "[";
         for (int i = 0; i < size -1; i++) {
-            s1 = list[i] + ",";
+            s1 += list[i] + ",";
         }
         return s1 + list[size - 1] + "]";  
     }   
