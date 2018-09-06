@@ -117,7 +117,7 @@ public class List {
      * with the contents of the original array.
      *
      * TODO
-     * Create a method called resize(). 
+     * Create a method called resize().
      * double the size of the old array.
      * Then copy the contents of the old array to the new one.
      *
@@ -135,6 +135,11 @@ public class List {
      * to the objects outside the list
      *
      * The method returns an int. Empty list should return 0.
+     */
+    /**.
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
      */
     public int size() {
         return size;
