@@ -2,7 +2,7 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 
 public class List {
-	//Implement all the methods mentioned to build a ListADT
+    //Implement all the methods mentioned to build a ListADT
 
     /*
      * The goal for the list is to store items.
@@ -155,7 +155,7 @@ public class List {
      * The method returns an int. Empty list should return 0.
      */
     public int size() {
-    	return size;
+        return size;
     }
     /*
      * The remove method does what the name suggests.
@@ -278,33 +278,31 @@ public class List {
 
      /* 
         Inserts the specified element at the specified index 
-	by moving all the elements to the right.
+    by moving all the elements to the right.
         The method returns void (nothing)
      */
-    public void add(int index,int item) {
+    public void add(final int index, final int item) {
          // write the logic 
-    	for (int i = size; i > index; i--) {
-    		list[i] = list[i - 1];
-    	}
-    	list[index] = item;
-    	size += 1;
+        for (int i = size; i > index; i--) {
+            list[i] = list[i - 1];
+        }
+        list[index] = item;
+        size += 1;
     }
     
     /* Returns the count of occurances of a given item in the list*/
     public int count(int item)
     {
          // write the logic 
-    	int count = 0;
+        int count = 0;
         for (int i = 0; i < size; i++) {
-        	if (list[i] == item) {
-        		count += 1;
-        	}
+            if (list[i] == item) {
+                count += 1;
+            }
         }
         return count;
     }
-
-
-	public static void main(String[] args) {
+    public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -368,5 +366,5 @@ public class List {
                 break;
             }
         }
-	}
+    }
 }
