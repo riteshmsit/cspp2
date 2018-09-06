@@ -155,9 +155,8 @@ public class List {
      * The method returns an int. Empty list should return 0.
      */
     public int size() {
-        return size;
+    	return size;
     }
-
     /*
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
@@ -233,7 +232,7 @@ public class List {
      */
     public String toString() {
         if(size == 0)
-            return "";
+            return "[]";
         String str = "[";
         int i = 0;
         for(i = 0; i < size - 1; i++) {
