@@ -58,7 +58,7 @@ public class List {
      * There will be some clients of the ADT that will require
      * the list to contain n elements which is known
      * at the time of creating the list.
-     * 
+     *
      * The overloaded constructor is a way to initialize a list with
      * a list capacity of n items where n is given as an argument to
      * constructor.
@@ -72,7 +72,7 @@ public class List {
     public List(final int capacity) {
         size = 0;
         list = new int[capacity];
-    }   
+    }
     /*
      * The add method does what the name suggests.
      * Add an int item to the list.
@@ -163,7 +163,7 @@ public class List {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index >= 0 && index < size) {
-            for(int i = index; i < size - 1; i++) {
+            for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
             size--;
@@ -271,7 +271,7 @@ public class List {
         }
         return -1;
     }
-   /*Inserts all the elements of specified int 
+   /*Inserts all the elements of specified int
     array to the end of list*/
     /**.
      * { item_description }
