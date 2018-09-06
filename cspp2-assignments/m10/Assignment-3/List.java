@@ -87,7 +87,8 @@ public class List<E> {
             }
             size--;
         }
-        System.out.println("Invalid Position Exception");
+        System.out.println("");
+        //System.out.println("Invalid Position Exception");
     }
     /*
      * Get method has to return the items that is
