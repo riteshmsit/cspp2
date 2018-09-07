@@ -5,7 +5,10 @@ import java.util.Arrays;
  * List of .
  */
 public class List {
-    final int H = 100;
+    /**.
+     * { var_description }
+     */
+    final int hundred = 100;
     //Implement all the methods mentioned to build a ListADT
     /*
      * The goal for the list is to store items.
@@ -31,7 +34,7 @@ public class List {
     /**.
      * { var_description }
      */
-    private int[] list = new int[H];
+    private int[] list = new int[hundred];
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
@@ -53,7 +56,7 @@ public class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
+     *
      */
     /**.
      * { var_description }
@@ -83,7 +86,6 @@ public class List {
         // That is the initial value to use for size.
 
     }
-    
     /*
      * The add method does what the name suggests. Add an int item to the list.
      * The assumption is to store the item at the end of the list What is the
@@ -123,7 +125,7 @@ public class List {
      * @return     { description_of_the_return_value }
      */
     private int[] resize() {
-        list = Arrays.copyOf(list,2*list.length);
+        list = Arrays.copyOf(list, 2 * list.length);
         return list;
     }
     /**.
@@ -202,6 +204,11 @@ public class List {
      * Example: [1,2,3,0,0,0,0,0,0,0] toString should only return the items in
      * the list and not all the elements of the array.
      */
+    /**.
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         // Replace the code below
         String s1 = "[";
@@ -271,15 +278,14 @@ public class List {
     }
     /*
      Removes all of its elements that are contained in the specified int 
-     array.    
+     array.
     */
      /**.
       * Removes all.
       *
       * @param      newArray  The new array
       */
-     public void removeAll(final int[] newArray)
-     {
+     public void removeAll(final int[] newArray) {
         // write the logic
         for (int i = 0; i < newArray.length; i++) {
             int index = indexOf(newArray[i]);
@@ -335,8 +341,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(List list) {
-    // Replace the code below
+    public boolean equals(final List list) {
         return this.toString().equals(list.toString());
     }
     /*
@@ -421,12 +426,13 @@ public class List {
                     if (tokens.length == 2) {
                         String[] t2 = tokens[1].split(",");
                         int[] a = new int[t2.length];
-                        for(int i = 0; i < t2.length; i++)
+                        for(int i = 0; i < t2.length; i++) {
                             a[i] = Integer.parseInt(t2[i]);
+                        }
                         l.removeAll(a);
                     }
                 break;
-                case "subList": {
+                case "subList":
                     if (tokens.length != 2) {
                         break;
                     }
@@ -437,7 +443,6 @@ public class List {
                         System.out.println(object);
                     }
                     break;
-                }
                 case "equals":
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
@@ -457,3 +462,5 @@ public class List {
         }
     }
 }
+
+
