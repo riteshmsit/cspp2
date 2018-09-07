@@ -13,7 +13,7 @@ class Student {
      *
      * @param      name  The name
      */
-    public Student(String name) {
+    public Student(final String name) {
         this.name = name;
     }
     /**.
@@ -75,7 +75,7 @@ public class Solution {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "add":
-                    if (tokens.length == 2){
+                    if (tokens.length == 2) {
                         String[] t = tokens[1].split(",");
                         if (t.length == 1) {
                             l.add(Integer.parseInt(tokens[1]));
@@ -113,7 +113,7 @@ public class Solution {
                         String[] t1 = tokens[1].split(",");
                         Integer[] temp = new Integer[t1.length];
                         for (int i = 0; i < temp.length; i++) {
-                            temp[i]=Integer.parseInt(t1[i]);
+                            temp[i] = Integer.parseInt(t1[i]);
                         }
                         l.addAll(temp);
                     }
@@ -128,9 +128,9 @@ public class Solution {
                     }
                 break;
                 case "subList": {
-                    if (tokens.length != 2){
+                    if (tokens.length != 2) {
                         break;
-                    } 
+                    }
                     String[] arrstring3 = tokens[1].split(",");
                     List object = l.subList(Integer.parseInt(arrstring3[0]),
                         Integer.parseInt(arrstring3[1]));
@@ -155,7 +155,7 @@ public class Solution {
                 default:
                 break;
             }
-        }   
+        }
     }
     /**.
      * { function_description }
@@ -219,8 +219,9 @@ public class Solution {
                     if (tokens.length == 2) {
                         String[] t2 = tokens[1].split(",");
                         Double[] a = new Double[t2.length];
-                        for(int i = 0; i < t2.length; i++)
+                        for (int i = 0; i < t2.length; i++) {
                             a[i] = Double.parseDouble(t2[i]);
+                        }
                         l.removeAll(a);
                     }
                 break;
@@ -477,8 +478,8 @@ public class Solution {
                     if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Student[] students = new Student[t1.length];
-                        for (int i = 0; i < t1.length ;i++) {
-                            students[i] = new Student(t1[i]);   
+                        for (int i = 0; i < t1.length; i++) {
+                            students[i] = new Student(t1[i]);
                         }
                         l.addAll(students);
                     }
@@ -487,21 +488,21 @@ public class Solution {
                     if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Student[] students = new Student[t1.length];
-                        for (int i = 0; i < t1.length ;i++) {
-                            students[i] = new Student(t1[i]);   
+                        for (int i = 0; i < t1.length; i++) {
+                            students[i] = new Student(t1[i]);
                         }
                         l.removeAll(students);
                     }
                 break;
-                case "subList": {
+                case "subList": 
                     if (tokens.length != 2) break;
                     String[] arrstring3 = tokens[1].split(",");
                     List object = l.subList(Integer.parseInt(arrstring3[0]),
                         Integer.parseInt(arrstring3[1]));
-                    if (object != null) 
+                    if (object != null) {
                         System.out.println(object);
+                    }
                     break;
-                }
                 case "equals":
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
@@ -525,12 +526,12 @@ public class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         String objectType = stdin.nextLine();
 
-        switch(objectType) {
+        switch (objectType) {
             case "S"://This case will be executed for String type list
                 executeListString(stdin);
             break;
