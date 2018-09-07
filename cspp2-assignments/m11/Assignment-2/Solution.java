@@ -24,6 +24,11 @@ class Student {
     public String getName() {
         return this.name1;
     }
+    /**.
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int hashcode() {
         return 0;
     }
