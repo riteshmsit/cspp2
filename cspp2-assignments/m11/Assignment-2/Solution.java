@@ -320,8 +320,9 @@ final class Solution {
                     if (tokens.length == 2) {
                         String[] t2 = tokens[1].split(",");
                         Float[] a = new Float[t2.length];
-                        for (int i = 0; i < t2.length; i++)
+                        for (int i = 0; i < t2.length; i++) {
                             a[i] = Float.parseFloat(t2[i]);
+                        }
                         l.removeAll(a);
                     }
                 break;
@@ -330,7 +331,8 @@ final class Solution {
                         break;
                     }
                     String[] arrstring3 = tokens[1].split(",");
-                    List object = l.subList(Integer.parseInt(arrstring3[0]), Integer.parseInt(arrstring3[1]));
+                    List object = l.subList(Integer.parseInt(arrstring3[0]),
+                        Integer.parseInt(arrstring3[1]));
                     if (object != null)
                         System.out.println(object);
                     break;
@@ -357,7 +359,7 @@ final class Solution {
      *
      * @param      stdin  The stdin
      */
-    public static void executeListString(Scanner stdin) {
+    public static void executeListString(final Scanner stdin) {
         List<String> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -419,8 +421,9 @@ final class Solution {
                     String[] arrstring3 = tokens[1].split(",");
                     List object = l.subList(Integer.parseInt(arrstring3[0]),
                         Integer.parseInt(arrstring3[1]));
-                    if (object != null) 
+                    if (object != null) {
                         System.out.println(object);
+                    }
                     break;
                 case "equals":
                     if (tokens.length == 2) {
@@ -440,7 +443,6 @@ final class Solution {
             }
         }   
     }
-
     public static void executeListStudent(Scanner stdin) {
         List<Student> l = new List();
         while (stdin.hasNext()) {
@@ -572,4 +574,8 @@ final class Solution {
         }
     }
 }
+
+
+
+
 
