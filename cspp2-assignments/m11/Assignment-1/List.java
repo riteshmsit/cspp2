@@ -237,7 +237,7 @@ public class List {
     public List subList(int start, int end) 
     {
     // write the logic for subList
-        List sublist = new List();
+        List newlist = new List();
         if (start < 0 || end < 0) {
             System.out.println("Index Out of Bounds Exception");
             return null;
@@ -251,9 +251,9 @@ public class List {
             return null;
         }
        for (int i = start; i < end; i++) {
-            sublist.add(list[i]);
+            newlist.add(list[i]);
         } 
-        return sublist;
+        return newlist;
     }
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
