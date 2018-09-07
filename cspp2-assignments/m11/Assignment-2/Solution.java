@@ -24,13 +24,6 @@ class Student {
     public String getName() {
         return this.name1;
     }
-    /**.
-     * { function_description }
-     *
-     * @param      other  The other
-     *
-     * @return     { description_of_the_return_value }
-     */
     public int hashcode() {
         return 0;
     }
