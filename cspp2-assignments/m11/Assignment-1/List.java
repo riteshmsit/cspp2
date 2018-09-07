@@ -8,7 +8,7 @@ public class List {
     /**.
      * { var_description }
      */
-    final int hundred = 100;
+    private int hundred = 100;
     //Implement all the methods mentioned to build a ListADT
     /*
      * The goal for the list is to store items.
@@ -264,8 +264,7 @@ public class List {
      *
      * @param      newArray  The new array
      */
-    public void addAll(final int[] newArray)
-    {
+    public void addAll(final int[] newArray) {
         // write the logic
         int i, j;
         for (i = size, j = 0; j < newArray.length; i++, j++) {
@@ -277,7 +276,7 @@ public class List {
         }
     }
     /*
-     Removes all of its elements that are contained in the specified int 
+     Removes all of its elements that are contained in the specified int
      array.
     */
      /**.
@@ -327,7 +326,7 @@ public class List {
         }
        for (int i = start; i < end; i++) {
             newlist.add(list[i]);
-        } 
+        }
         return newlist;
     }
     /*
@@ -426,7 +425,7 @@ public class List {
                     if (tokens.length == 2) {
                         String[] t2 = tokens[1].split(",");
                         int[] a = new int[t2.length];
-                        for(int i = 0; i < t2.length; i++) {
+                        for (int i = 0; i < t2.length; i++) {
                             a[i] = Integer.parseInt(t2[i]);
                         }
                         l.removeAll(a);
