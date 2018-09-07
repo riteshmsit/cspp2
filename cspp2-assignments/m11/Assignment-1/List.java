@@ -242,7 +242,7 @@ public class List {
             System.out.println("Index Out of Bounds Exception");
             return null;
         }
-        if (start > size || start < size) {
+        if (start > size || end < size) {
             System.out.println("Index Out of Bounds Exception");
             return null;
         }
