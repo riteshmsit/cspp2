@@ -59,7 +59,7 @@ class Student {
 /**.
  * Class for solution.
  */
-public class Solution {
+final class Solution {
     /**.
      * { function_description }
      *
@@ -95,7 +95,8 @@ public class Solution {
                 break;
                 case "indexOf":
                     if (tokens.length == 2) {
-                        System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
+                        System.out.println(l.indexOf(Integer.parseInt(
+                            tokens[1])));
                     }
                 break;
                 case "get":
@@ -105,7 +106,8 @@ public class Solution {
                 break;
                 case "contains":
                     if (tokens.length == 2) {
-                        System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                        System.out.println(l.contains(Integer.parseInt(
+                            tokens[1])));
                     }
                 break;
                 case "addAll":
@@ -122,8 +124,9 @@ public class Solution {
                     if (tokens.length == 2) {
                         String[] t2 = tokens[1].split(",");
                         Integer[] a = new Integer[t2.length];
-                        for (int i = 0; i < t2.length; i++)
+                        for (int i = 0; i < t2.length; i++) {
                             a[i] = Integer.parseInt(t2[i]);
+                        }
                         l.removeAll(a);
                     }
                 break;
@@ -192,12 +195,14 @@ public class Solution {
                 break;
                 case "indexOf":
                     if (tokens.length == 2) {
-                        System.out.println(l.indexOf(Double.parseDouble(tokens[1])));
+                        System.out.println(l.indexOf(Double.parseDouble(
+                            tokens[1])));
                     }
                 break;
                 case "get":
                     if (tokens.length == 2) {
-                        System.out.println(l.get(Integer.parseInt(tokens[1])));
+                        System.out.println(l.get(Integer.parseInt(
+                            tokens[1])));
                     }
                 break;
                 case "contains":
@@ -229,7 +234,8 @@ public class Solution {
                 case "subList": {
                     if (tokens.length != 2) break;
                     String[] arrstring3 = tokens[1].split(",");
-                    List object = l.subList(Integer.parseInt(arrstring3[0]), Integer.parseInt(arrstring3[1]));
+                    List object = l.subList(Integer.parseInt(arrstring3[0]),
+                        Integer.parseInt(arrstring3[1]));
                     if (object != null) 
                         System.out.println(object);
                     break;
@@ -406,15 +412,16 @@ public class Solution {
                         l.removeAll(t2);
                     }
                 break;
-                case "subList": {
-                    if (tokens.length != 2) break;
+                case "subList":
+                    if (tokens.length != 2) {
+                        break;
+                    }
                     String[] arrstring3 = tokens[1].split(",");
                     List object = l.subList(Integer.parseInt(arrstring3[0]),
                         Integer.parseInt(arrstring3[1]));
                     if (object != null) 
                         System.out.println(object);
                     break;
-                }
                 case "equals":
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
