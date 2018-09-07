@@ -39,7 +39,7 @@ class Student {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(Object other) {
+    public boolean equals(final Object other) {
         if (!(other instanceof Student)) {
             return false;
         }
@@ -65,7 +65,13 @@ final class Solution {
      *
      * @param      stdin  The stdin
      */
-    public static void executeListInteger(Scanner stdin) {
+    /**.
+     * Constructs the object.
+     */
+    private Solution() {
+
+    }
+    public static void executeListInteger(final Scanner stdin) {
         List<Integer> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -130,7 +136,7 @@ final class Solution {
                         l.removeAll(a);
                     }
                 break;
-                case "subList": {
+                case "subList":
                     if (tokens.length != 2) {
                         break;
                     }
@@ -141,7 +147,6 @@ final class Solution {
                         System.out.println(object);
                     }
                     break;
-                }
                 case "equals":
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
@@ -165,7 +170,7 @@ final class Solution {
      *
      * @param      stdin  The stdin
      */
-    public static void executeListDouble(Scanner stdin) {
+    public static void executeListDouble(final Scanner stdin) {
         List<Double> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -231,7 +236,7 @@ final class Solution {
                         l.removeAll(a);
                     }
                 break;
-                case "subList": {
+                case "subList":
                     if (tokens.length != 2) {
                         break;
                     }
@@ -242,7 +247,6 @@ final class Solution {
                         System.out.println(object);
                     }
                     break;
-                }
                 case "equals":
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
@@ -276,7 +280,7 @@ final class Solution {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "add":
-                    if (tokens.length == 2){
+                    if (tokens.length == 2) {
                         String[] t = tokens[1].split(",");
                         if (t.length == 1) {
                             l.add(Float.parseFloat(tokens[1]));
@@ -338,8 +342,9 @@ final class Solution {
                     String[] arrstring3 = tokens[1].split(",");
                     List object = l.subList(Integer.parseInt(arrstring3[0]),
                         Integer.parseInt(arrstring3[1]));
-                    if (object != null)
+                    if (object != null) {
                         System.out.println(object);
+                    }
                     break;
                 case "equals":
                     if (tokens.length == 2) {
@@ -446,14 +451,14 @@ final class Solution {
                 default:
                 break;
             }
-        }   
+        }
     }
     /**.
      * { function_description }
      *
      * @param      stdin  The stdin
      */
-    public static void executeListStudent(Scanner stdin) {
+    public static void executeListStudent(final Scanner stdin) {
         List<Student> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -463,7 +468,7 @@ final class Solution {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "add":
-                    if (tokens.length == 2){
+                    if (tokens.length == 2) {
                         String[] t = tokens[1].split(",");
                         if (t.length == 1) {
                             l.add(new Student(tokens[1]));
@@ -584,4 +589,7 @@ final class Solution {
         }
     }
 }
+
+
+
 
