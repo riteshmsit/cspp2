@@ -8,7 +8,7 @@ public class List {
     /**.
      * { var_description }
      */
-    final int hundred = 100;
+    private final int hundred = 100;
     //Implement all the methods mentioned to build a ListADT
     /*
      * The goal for the list is to store items.
