@@ -336,12 +336,12 @@ public class List {
     /**.
      * { function_description }
      *
-     * @param      list  The list
+     * @param      listdata  The listdata
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(final List listname) {
-        return this.toString().equals(listname.toString());
+    public boolean equals(final List listdata) {
+        return this.toString().equals(listdata.toString());
     }
     /*
     * Removes all the elements from list
