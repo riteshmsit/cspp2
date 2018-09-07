@@ -293,7 +293,8 @@ final class Solution {
                 break;
                 case "indexOf":
                     if (tokens.length == 2) {
-                        System.out.println(l.indexOf(Float.parseFloat(tokens[1])));
+                        System.out.println(l.indexOf(Float.parseFloat(
+                            tokens[1])));
                     }
                 break;
                 case "get":
@@ -303,7 +304,8 @@ final class Solution {
                 break;
                 case "contains":
                     if (tokens.length == 2) {
-                        System.out.println(l.contains(Float.parseFloat(tokens[1])));
+                        System.out.println(l.contains(Float.parseFloat(
+                            tokens[1])));
                     }
                 break;
                 case "addAll":
@@ -443,6 +445,11 @@ final class Solution {
             }
         }   
     }
+    /**.
+     * { function_description }
+     *
+     * @param      stdin  The stdin
+     */
     public static void executeListStudent(Scanner stdin) {
         List<Student> l = new List();
         while (stdin.hasNext()) {
@@ -574,8 +581,4 @@ final class Solution {
         }
     }
 }
-
-
-
-
 
