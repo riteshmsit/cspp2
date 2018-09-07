@@ -4,13 +4,16 @@ import java.util.Scanner;
  * Class for student.
  */
 class Student {
+    /**.
+     * { var_description }
+     */
     private String name;
     /**.
      * Constructs the object.
      *
      * @param      name  The name
      */
-    public Student(String name) {//A constructor used to initialize the instance variables
+    public Student(String name) {
         this.name = name;
     }
     /**.
@@ -18,7 +21,7 @@ class Student {
      *
      * @return     The name.
      */
-    public String getName() {//Getter method which returns the value of instance variable
+    public String getName() {
         return this.name;
     }
     /**.
@@ -36,7 +39,7 @@ class Student {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(Object other) { //This method is to check if two students names are equal or not
+    public boolean equals(Object other) {
         if (!(other instanceof Student)) {
             return false;
         }
@@ -109,7 +112,7 @@ public class Solution {
                     if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Integer[] temp = new Integer[t1.length];
-                        for(int i = 0; i < temp.length; i++) {
+                        for (int i = 0; i < temp.length; i++) {
                             temp[i]=Integer.parseInt(t1[i]);
                         }
                         l.addAll(temp);
@@ -119,24 +122,28 @@ public class Solution {
                     if (tokens.length == 2) {
                         String[] t2 = tokens[1].split(",");
                         Integer[] a = new Integer[t2.length];
-                        for(int i = 0; i < t2.length; i++)
+                        for (int i = 0; i < t2.length; i++)
                             a[i] = Integer.parseInt(t2[i]);
                         l.removeAll(a);
                     }
                 break;
                 case "subList": {
-                    if (tokens.length != 2) break;
+                    if (tokens.length != 2){
+                        break;
+                    } 
                     String[] arrstring3 = tokens[1].split(",");
-                    List object = l.subList(Integer.parseInt(arrstring3[0]), Integer.parseInt(arrstring3[1]));
-                    if (object != null) 
+                    List object = l.subList(Integer.parseInt(arrstring3[0]),
+                        Integer.parseInt(arrstring3[1]));
+                    if (object != null) {
                         System.out.println(object);
+                    }
                     break;
                 }
                 case "equals":
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
                         List l2 = new List();
-                        for (int k = 0; k < lt.length; k++ ) {
+                        for (int k = 0; k < lt.length; k++) {
                             l2.add(Integer.parseInt(lt[k]));
                         }
                         System.out.println(l.equals(l2));
@@ -165,7 +172,7 @@ public class Solution {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "add":
-                    if (tokens.length == 2){
+                    if (tokens.length == 2) {
                         String[] t = tokens[1].split(",");
                         if (t.length == 1) {
                             l.add(Double.parseDouble(tokens[1]));
@@ -229,7 +236,7 @@ public class Solution {
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
                         List l2 = new List();
-                        for (int k = 0; k < lt.length; k++ ) {
+                        for (int k = 0; k < lt.length; k++) {
                             l2.add(Double.parseDouble(lt[k]));
                         }
                         System.out.println(l.equals(l2));
@@ -295,7 +302,7 @@ public class Solution {
                     if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Float[] temp = new Float[t1.length];
-                        for(int i = 0; i < temp.length; i++) {
+                        for (int i = 0; i < temp.length; i++) {
                             temp[i] = Float.parseFloat(t1[i]);
                         }
                         l.addAll(temp);
@@ -305,7 +312,7 @@ public class Solution {
                     if (tokens.length == 2) {
                         String[] t2 = tokens[1].split(",");
                         Float[] a = new Float[t2.length];
-                        for(int i = 0; i < t2.length; i++)
+                        for (int i = 0; i < t2.length; i++)
                             a[i] = Float.parseFloat(t2[i]);
                         l.removeAll(a);
                     }
@@ -322,7 +329,7 @@ public class Solution {
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
                         List l2 = new List();
-                        for (int k = 0; k < lt.length; k++ ) {
+                        for (int k = 0; k < lt.length; k++) {
                             l2.add(Float.parseFloat(lt[k]));
                         }
                         System.out.println(l.equals(l2));
@@ -351,7 +358,7 @@ public class Solution {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "add":
-                    if (tokens.length == 2){
+                    if (tokens.length == 2) {
                         String[] t = tokens[1].split(",");
                         if (t.length == 1) {
                             l.add(tokens[1]);
@@ -489,7 +496,8 @@ public class Solution {
                 case "subList": {
                     if (tokens.length != 2) break;
                     String[] arrstring3 = tokens[1].split(",");
-                    List object = l.subList(Integer.parseInt(arrstring3[0]), Integer.parseInt(arrstring3[1]));
+                    List object = l.subList(Integer.parseInt(arrstring3[0]),
+                        Integer.parseInt(arrstring3[1]));
                     if (object != null) 
                         System.out.println(object);
                     break;
@@ -543,7 +551,7 @@ public class Solution {
                 executeListDouble(stdin);
             break;
 
-            case "O"://This case will be executed for Student type list i.e to store List of Student Objects
+            case "O":
                 executeListStudent(stdin);
                 break;
             default:
