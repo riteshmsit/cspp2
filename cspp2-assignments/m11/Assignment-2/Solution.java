@@ -7,14 +7,14 @@ class Student {
     /**.
      * { var_description }
      */
-    private String name;
+    private String name1;
     /**.
      * Constructs the object.
      *
      * @param      name  The name
      */
     Student(final String name) {
-        this.name = name;
+        this.name1 = name;
     }
     /**.
      * Gets the name.
@@ -22,7 +22,7 @@ class Student {
      * @return     The name.
      */
     public String getName() {
-        return this.name;
+        return this.name1;
     }
     /**.
      * { function_description }
@@ -53,7 +53,7 @@ class Student {
      * @return     String representation of the object.
      */
     public String toString() {
-        return this.name;
+        return this.name1;
     }
 }
 /**.
