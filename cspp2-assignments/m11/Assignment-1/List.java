@@ -340,8 +340,8 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(final List list) {
-        return this.toString().equals(list.toString());
+    public boolean equals(final List listname) {
+        return this.toString().equals(listname.toString());
     }
     /*
     * Removes all the elements from list
