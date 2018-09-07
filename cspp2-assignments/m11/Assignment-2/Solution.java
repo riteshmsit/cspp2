@@ -29,7 +29,7 @@ class Student {
      *
      * @return     { description_of_the_return_value }
      */
-    public int EqualsHashCode() {
+    public int hashcode() {
         return 0;
     }
     @Override
