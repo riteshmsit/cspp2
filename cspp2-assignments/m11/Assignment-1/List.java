@@ -81,10 +81,10 @@ public class List {
      *
      * The method returns void (nothing)
      */
-    public List(final int capacity) {
+    /*List(final int capacity) {
         size = 0;
         list = new int[capacity];
-    }
+    }*/
     public void add(int item) {
         //Inserts the specified element at the end of the list.
         if (size == list.length) {
@@ -237,7 +237,7 @@ public class List {
     public List subList(int start, int end) 
     {
     // write the logic for subList
-        List newlist = new List(end - start);
+        List sublist = new List();
         if (start < 0 || end < 0) {
             System.out.println("Index Out of Bounds Exception");
             return null;
@@ -251,9 +251,9 @@ public class List {
             return null;
         }
        for (int i = start; i < end; i++) {
-            newlist.add(list[i]);
+            sublist.add(list[i]);
         } 
-        return newlist;
+        return sublist;
     }
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
