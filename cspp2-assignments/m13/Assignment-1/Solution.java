@@ -29,9 +29,9 @@ class Set {
                 if (arrayelement == arr[i]) {
                     flag = 1;
                 }
+            }
             if (flag == 0) {
                 arr[size++] = arrayelement;
-            }
             }
             
         }
