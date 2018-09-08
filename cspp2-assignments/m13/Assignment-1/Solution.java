@@ -20,11 +20,20 @@ class Set {
         return size;
     }
     public void add(int arrayelement) {
+        int flag = 0;
         if (size == arr.length) {
             arr = resize();
             arr[size++] = arrayelement;
         } else {
-            arr[size++] = arrayelement;
+            for (int i = 0; i < arr.length; i++) {
+                if (arrayelement == arr[i]) {
+                    flag = 1;
+                }
+            if (flag == 0) {
+                arr[size++] = arrayelement;
+            }
+            }
+            
         }
     }
     public int[] resize() {
