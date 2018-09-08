@@ -56,7 +56,7 @@ class Set {
         } else {
         String s1 = "{";
         for (int i = 0; i < size - 1; i++) {
-            s1 += arr[i] + ",";
+            s1 += arr[i] + ", ";
         }
         return s1 + arr[size - 1] + "}";
         }
