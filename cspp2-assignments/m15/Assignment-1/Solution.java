@@ -359,14 +359,14 @@ class List {
     // write the logic for clear.
         size = 0;
     }
-    public void count(int item) {
+    public int count(int item) {
         int count = 0;
         for (int i = 0; i < size; i++) {
             if (list[i] == item) {
                 count += 1;
             }
         }
-        System.out.println(count);
+        return count;
     }
 }
     /**.
@@ -408,7 +408,7 @@ class Solution {
                         l.remove(Integer.parseInt(tokens[1]));
                     }
                 } catch (Exception e) {
-                    
+                    System.out.println(e.getMessage());
                 }
                 break;
                 case "indexOf":
@@ -479,7 +479,7 @@ class Solution {
                     l.clear();
                 break;
                 case "count":
-                    l.count(Integer.parseInt(tokens[1]));
+                    System.out.println(l.count(Integer.parseInt(tokens[1])));
                 default:
                 break;
             }
