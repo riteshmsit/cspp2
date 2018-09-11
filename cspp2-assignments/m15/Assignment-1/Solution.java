@@ -357,14 +357,14 @@ class List {
     // write the logic for clear.
         size = 0;
     }
-    public int count(int item) {
+    public void count(int item) {
         int count = 0;
         for (int i = 0; i < size; i++) {
             if (list[i] == item) {
                 count += 1;
             }
         }
-        return count;
+        System.out.println(count);;
     }
 }
     /**.
