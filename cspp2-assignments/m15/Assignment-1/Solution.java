@@ -168,7 +168,7 @@ class List {
             size--;
         } else {
             throw new Exception("Invalid Position Exception");
-        }               
+        }
     }
     /*
      * Get method has to return the items that is at the index position passed
@@ -363,7 +363,7 @@ class List {
     // write the logic for clear.
         size = 0;
     }
-    public int count(int item) {
+    public int count(final int item) {
         int count = 0;
         for (int i = 0; i < size; i++) {
             if (list[i] == item) {
@@ -373,12 +373,10 @@ class List {
         return count;
     }
 }
-    /**.
-     * { function_description }
-     *
-     * @param      args  The arguments
-     */
-class Solution {
+/**.
+ * { item_description }
+ */
+final class Solution {
     /**.
      * Constructs the object.
      */
