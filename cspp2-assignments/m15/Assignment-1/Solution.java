@@ -73,7 +73,7 @@ class List {
     /**.
      * Constructs the object.
      */
-    public List() {
+    List() {
 
         // what are the two variables to be initialized here? think about the
         // private variables described above. What should be the default values?
@@ -154,9 +154,11 @@ class List {
     /**.
      * { function_description }
      *
-     * @param      index  The index
+     * @param      index      The index
+     *
+     * @throws     Exception  { exception_description }
      */
-    public void remove(final int index) throws Exception{
+    public void remove(final int index) throws Exception {
         // write the logic for remove here. Think about what to do to the size
         // variable.
         if (index >= 0 && index < size) {
@@ -166,7 +168,7 @@ class List {
             size--;
         } else {
             throw new Exception("Invalid Position Exception");
-        }                    
+        }               
     }
     /*
      * Get method has to return the items that is at the index position passed
@@ -282,9 +284,11 @@ class List {
      /**.
       * Removes all.
       *
-      * @param      newArray  The new array
+      * @param      newArray   The new array
+      *
+      * @throws     Exception  { exception_description }
       */
-     public void removeAll(final int[] newArray) throws Exception{
+     public void removeAll(final int[] newArray) throws Exception {
         // write the logic
         for (int i = 0; i < newArray.length; i++) {
             int index = indexOf(newArray[i]);
@@ -292,7 +296,7 @@ class List {
                 try {
                     remove(index);
                     index = indexOf(newArray[i]);
-                } catch(Exception e) {
+                } catch (Exception e) {
                     throw new Exception("Invalid Position Exception");
                 }
             }
@@ -375,6 +379,17 @@ class List {
      * @param      args  The arguments
      */
 class Solution {
+    /**.
+     * Constructs the object.
+     */
+    private Solution() {
+
+    }
+    /**.
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
@@ -449,11 +464,10 @@ class Solution {
                         }
                             l.removeAll(a);
                             break;
-                        } catch(Exception e) {
+                        } catch (Exception e) {
                             break;
                         }
                     }
-                
                 case "subList":
                     if (tokens.length != 2) {
                         break;
