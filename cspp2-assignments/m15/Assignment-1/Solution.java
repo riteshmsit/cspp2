@@ -163,9 +163,9 @@ class List {
             if (index >= 0 && index < size) {
                 for (int i = index; i < size - 1; i++) {
                     list[i] = list[i + 1];
-            }
+                }
                 size--;
-        }
+            }
         } catch(Exception e) {
             System.out.println("Invalid Position Exception");
         }         
