@@ -363,6 +363,13 @@ class List {
     // write the logic for clear.
         size = 0;
     }
+    /**.
+     * { function_description }
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int count(final int item) {
         int count = 0;
         for (int i = 0; i < size; i++) {
