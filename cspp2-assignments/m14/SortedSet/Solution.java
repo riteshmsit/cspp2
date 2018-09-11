@@ -233,8 +233,8 @@ class SortedSet extends Set {
     /**
      * { function_description }.
      *
-     * @param      start  The start
-     * @param      end    The end
+     * @param      fromElement  The starting element
+     * @param      toElement    The ending element
      *
      * @return     { description_of_the_return_value }
      */
@@ -419,3 +419,4 @@ public final class Solution {
         }
     }
 }
+
