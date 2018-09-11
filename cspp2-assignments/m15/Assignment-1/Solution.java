@@ -359,7 +359,7 @@ class List {
     }
     public int count(int item) {
         int count = 0;
-        for (int i = 0; i < size - 1; i++) {
+        for (int i = 0; i < size; i++) {
             if (list[i] == item) {
                 count += 1;
             }
