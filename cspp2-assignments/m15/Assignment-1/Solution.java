@@ -156,20 +156,17 @@ class List {
      *
      * @param      index  The index
      */
-    public void remove(final int index) {
+    public void remove(final int index) throws Exception{
         // write the logic for remove here. Think about what to do to the size
         // variable.
-        try {
-            if (index >= 0 && index < size) {
-                for (int i = index; i < size - 1; i++) {
-                    list[i] = list[i + 1];
-                }
-                size--;
+        if (index >= 0 && index < size) {
+            for (int i = index; i < size - 1; i++) {
+                list[i] = list[i + 1];
             }
-        } catch(Exception e) {
-            System.out.println("Invalid Position Exception");            
-        }         
-        
+            size--;
+        } else {
+            throw new Exception("Invalid Position Exception");
+        }                    
     }
     /*
      * Get method has to return the items that is at the index position passed
@@ -287,13 +284,17 @@ class List {
       *
       * @param      newArray  The new array
       */
-     public void removeAll(final int[] newArray) {
+     public void removeAll(final int[] newArray) throws Exception{
         // write the logic
         for (int i = 0; i < newArray.length; i++) {
             int index = indexOf(newArray[i]);
             while (index != -1) {
-                remove(index);
-                index = indexOf(newArray[i]);
+                try {
+                    remove(index);
+                    index = indexOf(newArray[i]);
+                } catch(Exception e) {
+                    throw new Exception("Invalid Position Exception");
+                }
             }
         }
     }
@@ -406,7 +407,7 @@ class Solution {
                     if (tokens.length == 2) {
                         l.remove(Integer.parseInt(tokens[1]));
                     }
-                } catch(Exception e) {
+                } catch (Exception e) {
                     
                 }
                 break;
@@ -440,12 +441,16 @@ class Solution {
                 break;
                 case "removeAll":
                     if (tokens.length == 2) {
-                        String[] t2 = tokens[1].split(",");
-                        int[] a = new int[t2.length];
-                        for (int i = 0; i < t2.length; i++) {
-                            a[i] = Integer.parseInt(t2[i]);
+                        try {
+                            String[] t2 = tokens[1].split(",");
+                            int[] a = new int[t2.length];
+                            for (int i = 0; i < t2.length; i++) {
+                                a[i] = Integer.parseInt(t2[i]);
                         }
-                        l.removeAll(a);
+                            l.removeAll(a);
+                        } catch(Exception e) {
+                            
+                        }
                     }
                 break;
                 case "subList":
