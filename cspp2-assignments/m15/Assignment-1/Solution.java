@@ -357,11 +357,13 @@ class List {
     // write the logic for clear.
         size = 0;
     }
+}
     /**.
      * { function_description }
      *
      * @param      args  The arguments
      */
+class Solution {
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
