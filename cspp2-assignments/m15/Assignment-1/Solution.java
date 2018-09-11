@@ -159,16 +159,12 @@ class List {
     public void remove(final int index) {
         // write the logic for remove here. Think about what to do to the size
         // variable.
-        try {
         if (index >= 0 && index < size) {
             for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
             size--;
-        } 
-        } catch(Exception e) {
-            System.out.println("Invalid Position Exception");
-        }
+        }         
     }
     /*
      * Get method has to return the items that is at the index position passed
@@ -357,6 +353,15 @@ class List {
     // write the logic for clear.
         size = 0;
     }
+    public int count(int item) {
+        int count = 0;
+        for (int i = 0; i < size - 1; i++) {
+            if (list[i] == item) {
+                count += 1;
+            }
+        }
+        return count;
+    }
 }
     /**.
      * { function_description }
@@ -462,6 +467,8 @@ class Solution {
                 case "clear":
                     l.clear();
                 break;
+                case "count":
+                    l.count(Integer.parseInt(tokens[1]));
                 default:
                 break;
             }
