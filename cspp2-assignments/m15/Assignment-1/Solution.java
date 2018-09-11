@@ -407,7 +407,7 @@ class Solution {
                         l.remove(Integer.parseInt(tokens[1]));
                     }
                 } catch(Exception e) {
-                    System.out.println("Invalid Position Exception");
+                    
                 }
                 break;
                 case "indexOf":
