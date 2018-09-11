@@ -167,8 +167,9 @@ class List {
                 size--;
             }
         } catch(Exception e) {
-            System.out.println("Invalid Position Exception");
+            System.out.println("Invalid Position Exception");            
         }         
+        
     }
     /*
      * Get method has to return the items that is at the index position passed
@@ -295,7 +296,7 @@ class List {
                 index = indexOf(newArray[i]);
             }
         }
-     }
+    }
     /*
     Returns a list object containing elements, including startIndex and
     excluding endIndex. The first parameter indicates the startIndex and the
@@ -364,7 +365,7 @@ class List {
                 count += 1;
             }
         }
-        System.out.println(count);;
+        System.out.println(count);
     }
 }
     /**.
