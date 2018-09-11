@@ -191,6 +191,9 @@ class Set {
         return -1;
     }
 }
+/**.
+ * Exception for signaling invalid subset selection errors.
+ */
 class InvalidSubsetSelectionException extends Exception {
     /**
      * Constructs the object.
@@ -434,3 +437,5 @@ final class Solution {
         }
     }
 }
+
+
