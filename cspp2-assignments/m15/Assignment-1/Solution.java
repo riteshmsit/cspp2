@@ -448,11 +448,12 @@ class Solution {
                                 a[i] = Integer.parseInt(t2[i]);
                         }
                             l.removeAll(a);
+                            break;
                         } catch(Exception e) {
-                            
+                            break;
                         }
                     }
-                break;
+                
                 case "subList":
                     if (tokens.length != 2) {
                         break;
