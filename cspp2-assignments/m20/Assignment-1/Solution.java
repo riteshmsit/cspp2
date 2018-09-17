@@ -296,35 +296,36 @@ public final class Solution {
         // add the question objects to the quiz class
         if (q > 0) {
             for (int i = 0; i < q; i++) {
-            String[] in = scan.nextLine().split(":");
-            if(in.length == 5) {
-                String[] choices = in[1].split(",");
-                if(choices.length >= 2) {
-                    if(Integer.parseInt(in[2]) > 0) {// && in[2] < choices.length) {
-                        if (Integer.parseInt(in[3]) > 0) {
-                            if(Integer.parseInt(in[4]) <= 0) {
-                                quiz.addQuestion(new Question(in[0], choices, Integer.parseInt(in[2]),Integer.parseInt(in[3]), Integer.parseInt(in[4])));
+                String[] in = scan.nextLine().split(":");
+                if(in.length == 5) {
+                    String[] choices = in[1].split(",");
+                    if(choices.length >= 2) {
+                        if(Integer.parseInt(in[2]) > 0) {// && in[2] < choices.length) {
+                            if (Integer.parseInt(in[3]) > 0) {
+                                if(Integer.parseInt(in[4]) <= 0) {
+                                    quiz.addQuestion(new Question(in[0], choices, Integer.parseInt(in[2]),Integer.parseInt(in[3]), Integer.parseInt(in[4])));
                                 //questions[quizsize++] = new Quiz(in[0], choices, Integer.parseInt(in[2]), Integer.parseInt(in[3]), Integer.parseInt(in[4]));
-                            } else {
-                                throw new Exception("Invalid penalty for " + in[0]);
+                                } else {
+                                    throw new Exception("Invalid penalty for " + in[0]);
+                                }
+                            }  else {
+                                throw new Exception("Invalid max marks for " + in[0]);
                             }
                         } else {
-                            throw new Exception("Invalid max marks for " + in[0]);
+                            throw new Exception("Correct Answer choice number is out of range for range for" + in[0]);
                         }
                     } else {
-                        throw new Exception("Correct Answer choice number is out of range for range for" + in[0]);
+                        throw new Exception(in[0] + "does not have enough answer choices");
                     }
                 } else {
-                    throw new Exception(in[0] + "does not have enough answer choices");
+                    throw new Exception("Error! Malformed question");
+                }  
                 }
+                System.out.println(q + " are added to the quiz");
             } else {
-                throw new Exception("Error! Malformed question");
-            }
-            }
-        } else {
             throw new Exception("Quiz does not have questions");
-        }
-    System.out.println(q + " are added to the quiz");
+            }
+        
     }
     /**
      * Starts a quiz.
