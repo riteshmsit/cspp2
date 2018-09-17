@@ -147,6 +147,7 @@ class Question {
         s += "\n";
         for (i = 0; i < this.choices.length - 1; i++) {
             s += this.choices[i] + "\t";
+            System.out.println("intostring");
         }
         s += this.choices[i];
         s += "\n";
