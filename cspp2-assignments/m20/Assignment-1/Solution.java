@@ -66,11 +66,8 @@ class Question {
      * @return     { description_of_the_return_value }
      */
     public boolean evaluateResponse(final String choice) {
-        if(this.getCorrectAnswer() == choice) {
+        if(getCorrectAnswer() == choice) {
             return true;
-
-
-
         }
         return false;
     }
@@ -213,7 +210,7 @@ class Quiz {
                 count += 1;
             }  else {
                 s += questions[i].getQuestionText();
-                s += "\n" + "Wrong Answer! - Penalty: " + questions[i].getPenalty();
+                s += "\n" + " Wrong Answer! - Penalty: " + questions[i].getPenalty();
                 total += questions[i].getPenalty();
                 count += 1;
         }
