@@ -144,6 +144,8 @@ class Question {
         s += getQuestionText() + "(" + getMaxMarks() + ")";
         s += "\n";
         for (i = 0; i < this.choices.length - 1; i++) {
+            // s += getQuestionText() + "(" + getMaxMarks() + ")";
+            // s += "\n";
             s += this.choices[i] + "\t";
             //System.out.println("intostring");
         }
@@ -215,6 +217,7 @@ class Quiz {
                 total += questions[i].getPenalty();
                 count += 1;
         }
+            s += "\n";
         }
         if(count > 0) {
             return (s + "\n" + "Total Score: " + total);
