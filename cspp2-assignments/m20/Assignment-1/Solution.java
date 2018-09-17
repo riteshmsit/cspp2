@@ -207,14 +207,12 @@ class Quiz {
         for(int i = 0; i < this.size; i++) {
             if (questions[i].evaluateResponse(questions[i].getResponse())) {
                 System.out.println(questions[i].getQuestionText());
-                s += "\n";
                 s += "Correct Answer ! - Marks Awarded: " + questions[i].getMaxMarks();
                 total += questions[i].getMaxMarks();
                 count += 1;
             }  else {
                 System.out.println(questions[i].getQuestionText());
-                s += "Wrong Answer ! - Penalty: " + questions[i].getPenalty();
-                s += "\n";
+                s += "Wrong Answer! - Penalty: " + questions[i].getPenalty();
                 total += questions[i].getPenalty();
                 count += 1;
         }
