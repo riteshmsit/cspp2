@@ -66,10 +66,11 @@ class Question {
      * @return     { description_of_the_return_value }
      */
     public boolean evaluateResponse(final String choice) {
-        if(getCorrectAnswer() == choice) {
-            return true;
-        }
-        return false;
+        // if(getCorrectAnswer() == choice) {
+        //     return true;
+        // }
+        // return false;
+        return this.getCorrectAnswer().equals(choice);
     }
     /**
      * Gets the correct answer.
