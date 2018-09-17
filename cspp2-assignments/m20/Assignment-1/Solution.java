@@ -206,7 +206,7 @@ class Quiz {
         for(int i = 0; i < this.size; i++) {
             if (questions[i].evaluateResponse(questions[i].getResponse())) {
                 s += questions[i].getQuestionText();
-                s += "\n" + "Correct Answer ! - Marks Awarded: " + questions[i].getMaxMarks();
+                s += "\n" + " Correct Answer ! - Marks Awarded: " + questions[i].getMaxMarks();
                 total += questions[i].getMaxMarks();
                 count += 1;
             }  else {
