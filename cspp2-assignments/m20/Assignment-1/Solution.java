@@ -220,7 +220,7 @@ class Quiz {
             s += "\n";
         }
         if(count > 0) {
-            return (s + "\n" + "Total Score: " + total);
+            return (s + "Total Score: " + total);
         }
         return null;
     }
