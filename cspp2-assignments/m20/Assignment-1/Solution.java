@@ -231,6 +231,8 @@ class Quiz {
  * Solution class for code-eval.
  */
 public final class Solution {
+    static int a = 1;
+
      /**
      * Constructs the object.
      */
@@ -269,13 +271,18 @@ public final class Solution {
                 System.out.println("|------------|");
                 System.out.println("| Start Quiz |");
                 System.out.println("|------------|");
-                startQuiz(s, q, Integer.parseInt(tokens[1]));
+                if (a == 1) {
+                    startQuiz(s, q, Integer.parseInt(tokens[1]));
+                }
+                //startQuiz(s, q, Integer.parseInt(tokens[1]));
                 break;
                 case "SCORE_REPORT":
                 System.out.println("|--------------|");
                 System.out.println("| Score Report |");
                 System.out.println("|--------------|");
+                if (a==1) {
                 displayScore(q);
+                }
                 break;
                 default:
                 break;
@@ -310,28 +317,34 @@ public final class Solution {
                                         Integer.parseInt(in[3]),
                                         Integer.parseInt(in[4])));
                                 } else {
+                                    a = -1;
                                     throw new Exception("Invalid penalty for "
                                         + in[0]);
                                 }
                             } else {
+                                a = -1;
                                 throw new Exception(
                                     "Invalid max marks for " + in[0]);
                             }
                         } else {
+                            a = -1;
                             throw new Exception(
                                 "Error! Correct answer choice number"
                                 + " is out of range for " + in[0]);
                         }
                     } else {
+                        a = -1;
                         throw new Exception(in[0]
                             + " does not have enough answer choices");
                     }
                 } else {
+                    a = -1;
                     throw new Exception("Error! Malformed question");
                 }
             }
             System.out.println(q + " are added to the quiz");
         } else {
+            a = -1;
             throw new Exception("Quiz does not have questions");
         }
         
@@ -348,6 +361,7 @@ public final class Solution {
         // write your code here to display the quiz questions on the console.
         // read the user responses from the console using scanner object.
         // store the user respone in the question object
+        
         for (int i = 0; i < q; i++) {
             //System.out.println(questions[i].getQuestion() + "(" + questions[i].getcc()+")");
             System.out.println(quiz.getQuestion(i).toString());
