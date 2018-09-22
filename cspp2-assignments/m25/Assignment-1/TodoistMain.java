@@ -114,25 +114,35 @@ class Task {
 		boolean urgent, String status) throws Exception  {
 		//System.out.println(toString());
 		if (title.length() == 0) {
-			throw new Exception("Title not provided");	
-		} else {
-			this.title = title;
-		}
-		this.assignedTo = assignedTo;
-		if (timeToComplete >= 0) {
-			this.timeToComplete = timeToComplete;
-		} else {
+			throw new Exception("Title not provided");
+		}	
+		// } else {
+		// 	this.title = title;
+		// }
+		//this.assignedTo = assignedTo;
+		if (timeToComplete < 0) {
 			throw new Exception("Invalid timeToComplete " + timeToComplete);		
-		}
+
+			//this.timeToComplete = timeToComplete;
+		} //else {
+			//throw new Exception("Invalid timeToComplete " + timeToComplete);		
+		//}
 		//System.out.println(getImportance()); 
-		this.important = important; 
+		//this.important = important; 
 		//this.important = important;
-		this.urgent = urgent;
-		if (status == "todo" || status == "done") {
-			this.status = status;
-		} else {
+		//this.urgent = urgent;
+		if (status != "todo" && status != "done") {
 			throw new Exception("Invalid status " + status);
-		}
+			//this.status = status;
+		}// else {
+			//throw new Exception("Invalid status " + status);
+		//}
+		this.urgent = urgent;
+		this.important = important;
+		this.status = status;
+		this.timeToComplete = timeToComplete;
+		this.title = title;
+		this.assignedTo = assignedTo;
 		//return Task(this.title,this.assignedTo,this.timeToComplete,this.important, this.urgent,this.status);
 		//System.out.println(toString());
 	}
@@ -153,7 +163,6 @@ class Task {
 	    	urgent = "Not Urgent";
 	    }
 	    return urgent;
-
 	}
 	public String getStatus() {
 		return this.status;
