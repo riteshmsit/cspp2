@@ -202,6 +202,7 @@ class Todoist {
 	public void addTask(Task obj) {
 		if (size == task.length) {
 			resize();
+			task[size++] = obj;
 		} else {
 			task[size++] = obj;
 		}
