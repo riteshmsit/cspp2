@@ -87,7 +87,7 @@ public class TodoistMain {
         boolean urgent = tokens[5].equals("y");
         String status = tokens[6];
         //try {
-        	System.out.println();
+        	//System.out.println();
         return new Task(title, assignedTo, timeToComplete, important, urgent, status);
         //} catch (Exception e) {
         	//System.out.println(e.getMessage());
