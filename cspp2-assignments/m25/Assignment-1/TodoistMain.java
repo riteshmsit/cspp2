@@ -112,9 +112,9 @@ class Task {
 	boolean important, urgent;
 	Task(String title, String assignedTo, int timeToComplete, boolean important,
 		boolean urgent, String status) throws Exception  {
+		System.out.println(toString());
 		if (title.length() == 0) {
-			throw new Exception("Title not provided");
-		
+			throw new Exception("Title not provided");	
 		} else {
 			this.title = title;
 		}
@@ -122,8 +122,7 @@ class Task {
 		if (timeToComplete >= 0) {
 			this.timeToComplete = timeToComplete;
 		} else {
-			throw new Exception("Invalid timeToComplete " + timeToComplete);
-			
+			throw new Exception("Invalid timeToComplete " + timeToComplete);		
 		}
 		//System.out.println(getImportance()); 
 		this.important = important; 
@@ -135,10 +134,6 @@ class Task {
 			throw new Exception("Invalid status " + status);
 		}
 		//System.out.println(toString());
-	}
-	public String Task(String title, String assignedTo, int timeToComplete, boolean important,
-		boolean urgent, String status) {
-		return toString();
 	}
 	public  String getImportance() {
 		String imp;
