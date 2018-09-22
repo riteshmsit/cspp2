@@ -185,7 +185,7 @@ class Task {
 			s += ", " + "Not Important";
 		}
 		if (this.urgent) {
-			s += "," + "Urgent";
+			s += ", " + "Urgent";
 		} else {
 			s += ", " + "Not Urgent";
 		} 
