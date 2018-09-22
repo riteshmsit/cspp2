@@ -256,7 +256,9 @@ class Todoist {
 	public int totalTime4Completion() {
 		int timecount = 0;
 		for (int i = 0; i < size; i++) {
-			timecount += task[i].gettimeToComplete();
+			if (task[i].getStatus().equals("todo")) {
+				timecount += task[i].gettimeToComplete();
+			}
 		}
 		return timecount;
 
