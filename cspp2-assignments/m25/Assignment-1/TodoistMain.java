@@ -23,9 +23,9 @@ public class TodoistMain {
                 case "add-task":
                     testAddTask(todo, tokens);
                 break;
-                case "print-todoist":
-                    System.out.println(todo);
-                break;
+                // case "print-todoist":
+                //     System.out.println(todo);
+                // break;
                 // case "get-next":
                 //     System.out.println(todo.getNextTask(tokens[1]));
                 // break;
@@ -36,7 +36,7 @@ public class TodoistMain {
                 // break;
                 // case "total-time":
                 //     System.out.println(todo.totalTime4Completion());
-                // break;
+               // break;
                 default:
                 break;
             }
@@ -133,7 +133,6 @@ class Task {
 			this.status = status;
 		} else {
 			throw new Exception("Invalid status " + status);
-		
 		}
 		//System.out.println(toString());
 	}
