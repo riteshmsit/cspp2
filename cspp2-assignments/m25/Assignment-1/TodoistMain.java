@@ -124,7 +124,7 @@ class Task {
 		} else {
 			throw new Exception("Invalid timeToComplete " + timeToComplete);
 		}
-		System.out.println(getImportance()); 
+		//System.out.println(getImportance()); 
 		this.important = important; 
 		//this.important = important;
 		this.urgent = urgent;
