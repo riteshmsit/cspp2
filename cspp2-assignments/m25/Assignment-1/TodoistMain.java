@@ -23,19 +23,19 @@ public class TodoistMain {
                 case "add-task":
                     testAddTask(todo, tokens);
                 break;
-                // case "print-todoist":
-                //     System.out.println(todo);
-                // break;
-                // case "get-next":
-                //     System.out.println(todo.getNextTask(tokens[1]));
-                // break;
-                // case "get-next-n":
-                //     int n = Integer.parseInt(tokens[2]);
-                //     Task[] tasks = todo.getNextTask(tokens[1], n);
-                //     System.out.println(Arrays.deepToString(tasks));
-                // break;
-                // case "total-time":
-                //     System.out.println(todo.totalTime4Completion());
+               //  case "print-todoist":
+               //      System.out.println(todo);
+               //  break;
+               //  case "get-next":
+               //      System.out.println(todo.getNextTask(tokens[1]));
+               //  break;
+               //  case "get-next-n":
+               //      int n = Integer.parseInt(tokens[2]);
+               //      Task[] tasks = todo.getNextTask(tokens[1], n);
+               //      System.out.println(Arrays.deepToString(tasks));
+               //  break;
+               //  case "total-time":
+               //      System.out.println(todo.totalTime4Completion());
                // break;
                 default:
                 break;
@@ -116,35 +116,33 @@ class Task {
 		if (title.length() == 0) {
 			throw new Exception("Title not provided");
 		}	
-		// } else {
-		// 	this.title = title;
-		// }
-		//this.assignedTo = assignedTo;
+		 else {
+			this.title = title;
+		}
+		this.assignedTo = assignedTo;
 		if (timeToComplete < 0) {
 			throw new Exception("Invalid timeToComplete " + timeToComplete);		
 
 			//this.timeToComplete = timeToComplete;
-		} //else {
+		} else {
+			this.timeToComplete = timeToComplete;
+
 			//throw new Exception("Invalid timeToComplete " + timeToComplete);		
-		//}
+		}
 		//System.out.println(getImportance()); 
-		//this.important = important; 
+		this.important = important; 
 		//this.important = important;
-		//this.urgent = urgent;
+		this.urgent = urgent;
 		if (!(status.equals("todo") || (status.equals("done")))) {
 			throw new Exception("Invalid status " + status);
 			//this.status = status;
-		}// else {
+		} else {
+			this.status = status;
+
 			//throw new Exception("Invalid status " + status);
-		//}
-		this.urgent = urgent;
-		this.important = important;
-		this.status = status;
-		this.timeToComplete = timeToComplete;
-		this.title = title;
-		this.assignedTo = assignedTo;
-		//return Task(this.title,this.assignedTo,this.timeToComplete,this.important, this.urgent,this.status);
-		//System.out.println(toString());
+		}
+		// return Task(this.title,this.assignedTo,this.timeToComplete,this.important, this.urgent,this.status);
+		// System.out.println(toString());
 	}
 	public  String getImportance() {
 		String imp;
@@ -225,10 +223,10 @@ class Todoist {
 		return a;
 	}
 }
-// 	public Task getNextTask(String name) {
+	// public Task getNextTask(String name) {
 
-// 	}
-// 	public Task[] getNextTask(String name, int count) {
+	// }
+	// public Task[] getNextTask(String name, int count) {
 
 // 	}
 // 	public 
