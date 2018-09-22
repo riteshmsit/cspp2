@@ -114,6 +114,7 @@ class Task {
 		boolean urgent, String status) throws Exception  {
 		if (title.length() == 0) {
 			throw new Exception("Title not provided");
+		
 		} else {
 			this.title = title;
 		}
@@ -122,6 +123,7 @@ class Task {
 			this.timeToComplete = timeToComplete;
 		} else {
 			throw new Exception("Invalid timeToComplete " + timeToComplete);
+			
 		}
 		//System.out.println(getImportance()); 
 		this.important = important; 
@@ -131,10 +133,11 @@ class Task {
 			this.status = status;
 		} else {
 			throw new Exception("Invalid status " + status);
+		
 		}
-		System.out.println(toString());	
+		//System.out.println(toString());
 	}
-	private String getImportance() {
+	public  String getImportance() {
 		String imp;
 		if (this.important) {
 			imp = "Important";
@@ -143,7 +146,7 @@ class Task {
 	    }
 	    return imp;
 	}
-	private String getUrgency() {
+	public  String getUrgency() {
 		String urgent;
 		if (this.urgent) {
 			urgent = "Urgent";
@@ -153,16 +156,16 @@ class Task {
 	    return urgent;
 
 	}
-	private String getStatus() {
+	public String getStatus() {
 		return this.status;
 	}
-	private String getassignedTo() {
+	public String getassignedTo() {
 		return this.assignedTo;
 	}
-	private int gettimeToComplete() {
+	public int gettimeToComplete() {
 		return this.timeToComplete;
 	}
-	private String getTitle() {
+	public String getTitle() {
 		return this.title;
 	}
 	public String toString() {
@@ -200,19 +203,20 @@ class Todoist {
 	private void resize() {
 		task = Arrays.copyOf(task, task.length * 2);
 	}
+
+	public String toString() {
+		String a = "";
+		int i;
+		for (i = 0; i < size - 1; i++) {
+			a += task[i].getTitle() + ", " + task[i].getassignedTo() + ", " + task[i].gettimeToComplete() + ", " +  task[i].getImportance();
+			a += ", " + task[i].getUrgency() + ", " + task[i].getStatus();
+			a += "\n";
+		}
+		a += task[i].getTitle() + ", " + task[i].getassignedTo() + ", " + task[i].gettimeToComplete() + ", " + task[i].getImportance();
+		a += ", " + task[i].getUrgency() + ", " + task[i].getStatus();
+		return a;
+	}
 }
-// 	public String toString() {
-// 		String a = "";
-// 		int i;
-// 		for (i = 0; i < size - 1; i++) {
-// 			a += task[i].getTitle() + ", " + task[i].getassignedTo() + ", " + task[i].gettimeToComplete() + ", " +  task[i].getImportance();
-// 			a += ", " + task[i].getUrgency() + ", " + task[i].getStatus();
-// 			a += "\n";
-// 		}
-// 		a += task[i].getTitle() + ", " + task[i].getassignedTo() + ", " + task[i].gettimeToComplete() + ", " + task[i].getImportance();
-// 		a += ", " + task[i].getUrgency() + ", " + task[i].getStatus();
-// 		return a;
-// 	}
 // 	public Task getNextTask(String name) {
 
 // 	}
