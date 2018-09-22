@@ -112,7 +112,7 @@ class Task {
 	boolean important, urgent;
 	Task(String title, String assignedTo, int timeToComplete, boolean important,
 		boolean urgent, String status) throws Exception  {
-		System.out.println(toString());
+		//System.out.println(toString());
 		if (title.length() == 0) {
 			throw new Exception("Title not provided");	
 		} else {
@@ -133,6 +133,7 @@ class Task {
 		} else {
 			throw new Exception("Invalid status " + status);
 		}
+		//return Task(this.title,this.assignedTo,this.timeToComplete,this.important, this.urgent,this.status);
 		//System.out.println(toString());
 	}
 	public  String getImportance() {
