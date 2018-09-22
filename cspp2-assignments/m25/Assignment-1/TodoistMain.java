@@ -86,12 +86,13 @@ public class TodoistMain {
         boolean important = tokens[4].equals("y");
         boolean urgent = tokens[5].equals("y");
         String status = tokens[6];
-        //try {
-        		return new Task(
-            		title, assignedTo, timeToComplete, important, urgent, status);
-        //} catch (Exception e) {
-        	//System.out.println(e.getMessage());
-        //}
+        try {
+        	return new Task(
+            	title, assignedTo, timeToComplete, important, urgent, status);
+        } catch (Exception e) {
+        	System.out.println(e.getMessage());
+        	return new Task(title, assignedTo, timeToComplete, important, urgent, status);
+        }
     }
 
     /**
@@ -108,7 +109,7 @@ class Task {
 	int timeToComplete;
 	boolean important, urgent;
 	Task(String title, String assignedTo, int timeToComplete, boolean important,
-		boolean urgent, String status) throws Exception {
+		boolean urgent, String status) throws Exception  {
 		if (title.length() == 0) {
 			throw new Exception("Title not provided");
 		} else {
