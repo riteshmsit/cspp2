@@ -86,14 +86,16 @@ public class TodoistMain {
         boolean important = tokens[4].equals("y");
         boolean urgent = tokens[5].equals("y");
         String status = tokens[6];
-        try {
+        //try {
+        	//System.out.println();
         	return new Task(
             	title, assignedTo, timeToComplete, important, urgent, status);
-        } catch (Exception e) {
-        	System.out.println(e.getMessage());
+        //} catch (Exception e) {
+        	//System.out.println(e.getMessage());
         	//return null;
-        	return new Task(title, assignedTo, timeToComplete, important, urgent, status);
-        }
+        	//return Task(title, assignedTo, timeToComplete, important, urgent, status);
+        	//return Task(null);
+       // }
     }
 
     /**
@@ -122,7 +124,9 @@ class Task {
 		} else {
 			throw new Exception("Invalid timeToComplete " + timeToComplete);
 		}
-		this.important = important;
+		System.out.println(getImportance()); 
+		this.important = important; 
+		//this.important = important;
 		this.urgent = urgent;
 		if (status == "todo" || status == "done") {
 			this.status = status;
