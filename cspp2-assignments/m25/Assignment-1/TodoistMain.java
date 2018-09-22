@@ -213,7 +213,7 @@ class Todoist {
 	public String toString() {
 		String a = "";
 		int i;
-		for (i = 0; i < size - 1; i++) {
+		for (i = 0; i <= size - 1; i++) {
 			a += task[i].getTitle() + ", " + task[i].getassignedTo() + ", " + task[i].gettimeToComplete() + ", " +  task[i].getImportance();
 			a += ", " + task[i].getUrgency() + ", " + task[i].getStatus();
 			a += "\n";
