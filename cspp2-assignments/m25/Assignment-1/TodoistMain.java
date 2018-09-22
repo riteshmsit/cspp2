@@ -91,8 +91,8 @@ public class TodoistMain {
             title, assignedTo, timeToComplete, important, urgent, status);
         } catch (Exception e) {
         	System.out.println(e.getMessage());
+        	return null;
         }
-        return null;
     }
 
     /**
