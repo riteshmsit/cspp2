@@ -37,8 +37,8 @@ public class TodoistMain {
                 // case "total-time":
                 //     System.out.println(todo.totalTime4Completion());
                 // break;
-                // default:
-                // break;
+                default:
+                break;
             }
         }
     }
@@ -88,8 +88,7 @@ public class TodoistMain {
         String status = tokens[6];
         //try {
         	//System.out.println();
-        	return new Task(
-            	title, assignedTo, timeToComplete, important, urgent, status);
+        return new Task(title, assignedTo, timeToComplete, important, urgent, status);
         //} catch (Exception e) {
         	//System.out.println(e.getMessage());
         	//return null;
@@ -133,6 +132,7 @@ class Task {
 		} else {
 			throw new Exception("Invalid status " + status);
 		}
+		System.out.println(toString());	
 	}
 	private String getImportance() {
 		String imp;
