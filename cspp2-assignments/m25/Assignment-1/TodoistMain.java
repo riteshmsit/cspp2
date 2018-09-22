@@ -79,7 +79,7 @@ public class TodoistMain {
      *
      * @throws     Exception  if task inputs are invalid
      */
-    public static Task createTask(final String[] tokens) throws Exception {
+    public static Task createTask(final String[] tokens)  throws Exception {
         String title = tokens[1];
         String assignedTo = tokens[2];
         int timeToComplete = Integer.parseInt(tokens[3]);
@@ -131,7 +131,7 @@ class Task {
 		//this.important = important; 
 		//this.important = important;
 		//this.urgent = urgent;
-		if (status != "todo" && status != "done") {
+		if (!(status.equals("todo") || (status.equals("done")))) {
 			throw new Exception("Invalid status " + status);
 			//this.status = status;
 		}// else {
