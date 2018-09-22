@@ -225,12 +225,12 @@ class Todoist {
 	}
 
 	public Task getNextTask(String name) {
-		int i;
-		for (i = 0; i < size; i++) {
+		
+		for (int i = 0; i < size; i++) {
 			if(task[i].getTitle().equals(name)) {
 				if (task[i].getStatus().equals("todo")) {
-					if (task[i].getImportance().equals("Important") && task[i].getUrgency().equals("Not urgent")) {
-						return task[i + 1];
+					if (task[i].getImportance().equals("Important") && task[i].getUrgency().equals("Not Urgent")) {
+						return task[i];
 					}
 				}
 			}
