@@ -136,6 +136,10 @@ class Task {
 		}
 		//System.out.println(toString());
 	}
+	public String Task(String title, String assignedTo, int timeToComplete, boolean important,
+		boolean urgent, String status) {
+		return toString();
+	}
 	public  String getImportance() {
 		String imp;
 		if (this.important) {
